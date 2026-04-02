@@ -4,11 +4,10 @@ import getAllCertificates from '@salesforce/apex/CustomMetaddataUtil.getAllCerti
 export default class PortfolioCertifications extends LightningElement {
     @track loading = true;
     @track error;
-    // Start collapsed; we'll open with animation after data loads
     @track salesforceExpanded = false;
     @track otherExpanded = false;
     @track searchTerm = '';
-    @track sortBy = 'date'; // date | name
+    @track sortBy = 'date';
     @track certTitle='Certificates';
     @track salesforceCertsTitle='Salesforce ';
     @track otherCertsTitle='Other';
@@ -27,7 +26,6 @@ export default class PortfolioCertifications extends LightningElement {
         { label: 'Sort A-Z', value: 'name' }
     ];
 
-    // 🔥 NEW: Section icon for Salesforce accordion
     get salesforceSectionIcon() {
         return `${this.portfolioAssetsBase}/salesforce.png`;
     }
@@ -37,7 +35,6 @@ export default class PortfolioCertifications extends LightningElement {
     }
 
     get resolvedSalesforceCerts() {
-        // Map into view-model with imageUrl built from static resource + Image_Name__c (filename only, no leading slash)
         return this.salesforceCerts.map(cert => ({
             ...cert,
             imageUrl: cert.Image_Name__c ? `${this.portfolioAssetsBase}/${cert.Image_Name__c}` : ''
@@ -49,7 +46,6 @@ export default class PortfolioCertifications extends LightningElement {
     }
 
     get otherCertsCount() {
-        // Return the number of OTHER certs after filters are applied so UI shows filtered counts
         return this.filteredOther.length;
     }
 
@@ -95,7 +91,6 @@ export default class PortfolioCertifications extends LightningElement {
         getAllCertificates()
             .then(result => {
                 const rows = Array.isArray(result) ? result : [];
-                // Expecting fields: Id, Name, Category__c, Image_Name__c, Issued_Date__c, Source__c
                 const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
                 const toMonthYear = (iso) => {
                     if (!iso) return '';
@@ -115,11 +110,9 @@ export default class PortfolioCertifications extends LightningElement {
 
                 this.applyFiltersAndSort();
                 this.salesforceCertsTitle = `Salesforce (${this.filteredSalesforce.length})`;
-                // eslint-disable-next-line no-console
                 console.log('Fetched certifications:', JSON.stringify({ salesforce: this.salesforceCerts.length, other: this.otherCerts.length }));
             })
             .catch(error => {
-                // eslint-disable-next-line no-console
                 console.error('Error fetching certifications:', error);
                 this.error = 'Unable to load certifications.';
             })
@@ -167,13 +160,10 @@ export default class PortfolioCertifications extends LightningElement {
         this.filteredSalesforce = sortList(listSF);
         this.filteredOther = sortList(listOther);
 
-        // Update header titles/counts to reflect filtered results
         this.salesforceCertsTitle = `Salesforce (${this.filteredSalesforce.length})`;
         this.otherCertsTitle = `Other (${this.filteredOther.length})`;
         
-        // Open Salesforce accordion with a slight delay to allow CSS transition (animation-on-load)
         if (!this.salesforceExpanded) {
-            // Use microtask to flip after DOM paints post-data-load
             setTimeout(() => { this.salesforceExpanded = true; }, 300);
         }
     }

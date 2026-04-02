@@ -8,30 +8,22 @@
 public with sharing class ProjectTriggerHandler {
     public static void handleAfter(List<Project__c> newList, Map<Id, Project__c> oldMap) {
 
-        
-        // Map of Project Id -> set of tech names to attach
         Map<Id, Set<String>> projectToTechs = new Map<Id, Set<String>>();
-        // Map of Project Id -> set of tech names that were removed
         Map<Id, Set<String>> projectToRemovedTechs = new Map<Id, Set<String>>();
 
         for (Project__c p : newList) {
             Set<String> newSet = parsePicklistValues(p.Tech_Stack__c);
 
             if (oldMap == null || !oldMap.containsKey(p.Id)) {
-                // Insert: everything in newSet is to be processed as additions
                 if (!newSet.isEmpty()) projectToTechs.put(p.Id, newSet);
             } else {
                 Project__c oldP = oldMap.get(p.Id);
                 Set<String> oldSet = parsePicklistValues(oldP.Tech_Stack__c);
-                // Determine removed values (old - new)
                 Set<String> removed = new Set<String>();
                 removed.addAll(oldSet);
                 removed.removeAll(newSet);
                 if (!removed.isEmpty()) projectToRemovedTechs.put(p.Id, removed);
-
-                // Determine additions/remaining to create
                 if (!newSet.isEmpty()) {
-                    // If sets differ, we will re-evaluate creation; only add when newSet != oldSet
                     if (!oldSet.equals(newSet)) projectToTechs.put(p.Id, newSet);
                 }
             }
@@ -64,11 +56,6 @@ public with sharing class ProjectTriggerHandler {
             for (Skill__c s : skillsToInsert) nameToSkill.put(s.Name, s);
         }
 
-        // Build set of project Ids we need to work with (either add or remove)
-        Set<Id> projectIds = new Set<Id>();
-        projectIds.addAll(projectToTechs.keySet());
-        projectIds.addAll(projectToRemovedTechs.keySet());
-
         // Map removed tech names to Skill Ids and collect all removed skill ids
         Set<Id> removedSkillIds = new Set<Id>();
         Map<Id, Set<Id>> projectToRemovedSkillIds = new Map<Id, Set<Id>>();
@@ -83,15 +70,6 @@ public with sharing class ProjectTriggerHandler {
             if (!ids.isEmpty()) projectToRemovedSkillIds.put(pid, ids);
         }
 
-        // Delete existing Project_Skill__c junctions that correspond to removed skills
-        if (!projectIds.isEmpty() && !removedSkillIds.isEmpty()) {
-            List<Project_Skill__c> toDelete = [SELECT Id, Project__c, Skill__c FROM Project_Skill__c WHERE Project__c IN :projectIds AND Skill__c IN :removedSkillIds];
-            if (!toDelete.isEmpty()) {
-                delete toDelete;
-            }
-        }
-
-        // Now prepare to insert new junctions for additions
         // Build set of skill Ids for all tech names (after ensuring skills exist)
         Set<Id> skillIds = new Set<Id>();
         for (Skill__c s : nameToSkill.values()) skillIds.add(s.Id);
@@ -113,7 +91,7 @@ public with sharing class ProjectTriggerHandler {
                 String key = pid + ':' + skid;
                 if (!existingMap.containsKey(key)) {
                     psToInsert.add(new Project_Skill__c(Project__c = pid, Skill__c = skid));
-                    existingMap.put(key, null); // mark as created to prevent duplicates in same run
+                    existingMap.put(key, null);
                 }
             }
         }

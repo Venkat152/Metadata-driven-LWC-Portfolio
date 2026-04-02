@@ -17,7 +17,7 @@ public with sharing class CustomMetaddataUtil {
         return [SELECT Id,Name,Bio__c,Image_Name__c,Total_Certificates__c, Total_Projects__c,Skills__c,Type, Email__c,
         LinkedIn__c, Trailhead__c, Designation__c, Description,Github__c, Phone, PhotoUrl,Experience__c,BillingCountry
         FROM Account 
-        WHERE Type = 'Portfolio' AND Name ='Venkatesh Malladi' LIMIT 1];
+        WHERE Type = 'Portfolio' AND Name ='Venkat M' LIMIT 1];
     }
 
     @AuraEnabled(cacheable=true)
