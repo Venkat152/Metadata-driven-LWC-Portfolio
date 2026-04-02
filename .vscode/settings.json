@@ -1,0 +1,51 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/core/build/repository/**": true,
+    "**/core/ext/**": true,
+    "**/target/**": true,
+    "**/bin/**": true,
+    "META-INF/": true
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/core/build/repository/**": true,
+    "**/core/ext/**": true,
+    "**/target/**": true,
+    "**/bin/**": true
+  },
+  "perforce.maxBuffer": 10485760,
+  "perforce.editOnFileSave": true,
+  "perforce.editOnFileModified": true,
+  "perforce.addOnFileCreate": true,
+  "perforce.deleteOnFileDelete": true,
+  "perforce.client": "username-localhost-blt",
+  "perforce.user": "username",
+  "perforce.port": "ssl:host:port",
+  "extensions.ignoreRecommendations": true,
+  "salesforcedx-vscode-lightning.activationMode": "always",
+  "salesforcedx-vscode-lightning.showLightningExplorer": true,
+  "salesforcedx-vscode-core.internal-development": false,
+  "eslint.workingDirectories": [
+    "d:/Portfolio Project/Portfoilo"
+  ],
+  "eslint.validate": [
+    "javascript",
+    "typescript"
+  ],
+  "eslint.options": {
+    "overrideConfigFile": "d:\\Portfolio Project\\Portfoilo\\.eslintrc.json"
+  },
+  "workbench.colorCustomizations": {
+    "statusBar.background": null,
+    "activityBar.background": null
+  },
+  "xml.preferences.showSchemaDocumentationType": "none",
+  "salesforcedx-vscode-core.show-cli-success-msg": false
+}

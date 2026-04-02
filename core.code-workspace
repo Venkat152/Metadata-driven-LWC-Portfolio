@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "d:/Portfolio Project/Portfoilo"
+    }
+  ],
+  "settings": {
+    "eslint.workingDirectories": [
+      "d:/Portfolio Project/Portfoilo"
+    ],
+    "eslint.validate": [
+      "javascript",
+      "typescript"
+    ],
+    "eslint.options": {
+      "overrideConfigFile": "d:\\Portfolio Project\\Portfoilo\\.eslintrc.json"
+    }
+  }
+}

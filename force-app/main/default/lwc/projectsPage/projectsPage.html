@@ -1,0 +1,95 @@
+<!--
+  @description       : 
+  @author            : Venkatesh M
+  @group             : 
+  @last modified on  : 03-30-2026
+  @last modified by  : Venkatesh M
+-->
+<template>
+    <div class="trailhead-theme">
+        <header class="hero-section">
+            <div class="hero-header">
+                <!-- <img src={heroImage} alt="Hero Banner" class="hero-symbol" /> -->
+                <h1 class="hero-title">{projectline}</h1>
+            </div>
+                        <p class="hero-subtitle">{tagline}</p>
+        </header>
+
+        <section class="filters-section">
+            
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label class="filter-label">Tech Stack</label>
+                    <lightning-combobox
+                        name="techFilter"
+                        variant="label-hidden"
+                        placeholder="All Technologies"
+                        options={techOptions}
+                        value={selectedTech}
+                        onchange={handleTechChange}
+                        class="custom-combo">
+                    </lightning-combobox>
+                </div>
+
+                <div class="filter-group">
+                    <label class="filter-label">Difficulty</label>
+                    <lightning-combobox
+                        name="difficultyFilter"
+                        variant="label-hidden"
+                        placeholder="All Levels"
+                        options={difficultyOptions}
+                        value={selectedDifficulty}
+                        onchange={handleDifficultyChange}
+                        class="custom-combo">
+                    </lightning-combobox>
+                </div>
+
+                <button class="clear-filters-btn" onclick={clearFilters}>
+                    Clear All
+                </button>
+            </div>
+        </section>
+        <div class="hero-stats">
+            <span>
+                <strong><span class="hero-size">{filteredProjects.length}</span></strong> Projects Found
+            </span>
+        </div>
+        <section class="projects-grid">
+
+            <template for:each={filteredProjects} for:item="project">
+                <div key={project.name} class="project-card">
+                    <span class={project.difficultyClass}>{project.difficulty}</span>
+                    
+                    <div class="card-content">
+                        <span class="project-date">🗓️ {project.date}</span>
+                        <h3 class="project-name">{project.name}</h3>
+
+                        <div class="tech-stack">
+                            <template for:each={project.tech} for:item="tag">
+                                <span key={tag} class="tech-tag">{tag}</span>
+                            </template>
+                        </div>
+
+                        <div class="project-description">
+                            <lightning-formatted-rich-text 
+                                value={project.description}>
+                            </lightning-formatted-rich-text>
+                        </div>
+                                        </div>
+
+                    <div class="project-links">
+                        <template if:true={project.website}>
+                            <a href={project.website} target="_blank" class="link-btn website-btn">🌐 Live Demo</a>
+                        </template>
+                        <template if:true={project.github}>
+                            <a href={project.github} target="_blank" class="link-btn github-btn">📂 GitHub</a>
+                        </template>
+                        <template if:true={project.youtube}>
+                            <a href={project.youtube} target="_blank" class="link-btn youtube-btn">▶ Watch Demo</a>
+                        </template>
+                    </div>
+                </div>
+            </template>
+        </section>
+    </div>
+</template>

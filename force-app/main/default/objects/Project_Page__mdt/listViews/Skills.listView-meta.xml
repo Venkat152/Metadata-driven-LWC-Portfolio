@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Skills</fullName>
+    <columns>MasterLabel</columns>
+    <columns>isSkill__c</columns>
+    <columns>value__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>isSkill__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Skills</label>
+</ListView>

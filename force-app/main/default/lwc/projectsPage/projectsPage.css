@@ -1,0 +1,426 @@
+/* --- Trailblazer Platinum Theme --- */
+.trailhead-theme {
+    --th-blue-primary: #0176D3;
+    --th-blue-dark: #032D60;
+    --th-sky-bg: #F3F9FE;
+    --th-slate-text: #475569;
+    --th-glass: rgba(255, 255, 255, 0.9);
+    
+    /* Vibrant Status Colors */
+    --th-gold: #FFB01F; 
+    --th-red: #EA001E;  
+    --th-green: #2E844A; 
+    
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    font-family: 'Salesforce Sans', system-ui, sans-serif;
+    background: var(--th-sky-bg);
+    /* Professional grid background */
+    background-image: 
+        linear-gradient(rgba(1, 118, 211, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(1, 118, 211, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    margin-top: 50px;
+}
+
+/* --- Hero Section: Now with a Gradient Pop --- */
+.hero-section {
+    max-width: 1100px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--th-blue-dark) 0%, var(--th-blue-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.03em;
+}
+.hero-header {
+    display: flex;       /* This forces the line to be horizontal */
+    align-items: center; /* This keeps the Robot and Text centered vertically */
+    justify-content: center; /* Centers the whole group on the page */
+    gap: 15px;           /* Adds a nice space between the Robot and the Text */
+}
+
+.hero-symbol {
+    font-size: 3rem;     /* Slightly smaller than the text for better balance */
+    margin: 0;  
+    height: 3.5rem;
+    width: auto;         /* Removes default h1 margins that cause spacing issues */
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--th-slate-text);
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+/* Mobile View (Screens smaller than 768px) */
+@media (max-width: 767px) {
+    .hero-header {
+        flex-direction: column; /* Stacks the image on top of the text */
+        gap: 10px;              /* Reduces the gap slightly for smaller screens */
+        text-align: center;     /* Ensures the text stays centered when stacked */
+    }
+
+    .hero-title {
+        font-size: 2.2rem;      /* Shrink font size slightly so it doesn't wrap awkwardly */
+        line-height: 1.1;       /* Keeps the title tight and professional */
+    }
+
+    .hero-symbol {
+        height: 3.5rem;         /* Slightly smaller image for mobile balance */
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;      /* Better readability on small screens */
+        padding: 0 20px;        /* Prevents text from hitting the screen edges */
+    }
+}
+
+/* --- Glassmorphism Filters --- */
+.filters-section {
+    max-width: 950px;
+    margin: 0 auto 1rem;
+    background: var(--th-glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 24px;
+    padding: 1.5rem;
+    box-shadow: 0 15px 35px rgba(1, 118, 211, 0.1);
+}
+
+/* --- Project Cards: Modern Depth --- */
+.project-card {
+    background: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 24px;
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect: Glow and Lift */
+.project-card:hover {
+    transform: translateY(-12px);
+    border-color: var(--th-blue-primary);
+    box-shadow: 0 30px 60px -12px rgba(1, 118, 211, 0.15);
+}
+
+/* Add a subtle top-accent bar to each card */
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--th-blue-primary);
+    opacity: 0.2;
+}
+
+.project-name {
+    color: var(--th-blue-dark);
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin: 0.5rem 0 1rem;
+    line-height: 1.1;
+}
+
+/* --- Colored Tech Tags --- */
+.tech-tag {
+    background: #eef4ff;
+    color: #0056b3; /* Deeper blue for better contrast */
+    padding: 0.4rem 0.9rem;
+    border-radius: 99px; /* Pill shape */
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid #d0e1fd; /* Subtle border adds "crispness" */
+    margin: 0 0.5rem 0.5rem 0;
+    display: inline-block;
+}
+
+/* --- Action Buttons --- */
+.link-btn {
+    padding: 0.8rem 1.2rem; /* Balanced padding */
+    border-radius: 12px;
+    font-weight: 700;
+    transition: all 0.3s ease; /* Smooth transition for everything */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.8rem;
+    flex: 1 1 auto;
+    text-align: center;
+    white-space: nowrap;
+    color: white;
+    display: flex; /* Ensures icon and text align perfectly */
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Space between icon and text */
+}
+
+/* Premium Hover Effect */
+.link-btn:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1); /* Makes it pop without changing colors manually */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.website-btn {
+    background: #178be7;
+    box-shadow: 0 4px 14px rgba(1, 118, 211, 0.39);
+}
+
+.website-btn:hover {
+    background: var(--th-blue-dark);
+    box-shadow: 0 6px 20px rgba(1, 118, 211, 0.23);
+    transform: translateY(-2px);
+}
+
+/* --- Restored Filter Bar Styles --- */
+.filters-section {
+    max-width: 1100px;
+    margin: 0 auto 1rem; /* Tight gap to projects */
+    background: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 20px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 10px 25px rgba(1, 118, 211, 0.08);
+}
+
+.filters-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 1.5rem;
+    align-items: flex-end;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-label {
+    font-weight: 800;
+    font-size: 0.75rem;
+    color: var(--th-blue-primary);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+}
+
+/* Custom styling for the clear button to match Trailhead style */
+.clear-filters-btn {
+    height: 40px;
+    padding: 0 1.5rem;
+    background: white;
+    border: 2px solid var(--th-blue-primary);
+    color: var(--th-blue-primary);
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.clear-filters-btn:hover {
+    background: var(--th-blue-primary);
+    color: white;
+}
+
+/* Ensure the difficulty badge is always top-right in the card */
+.difficulty-low, .difficulty-medium, .difficulty-high {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 5;
+}
+
+/* Trailhead specific colors for badges */
+.difficulty-low { color: #2E844A; background: #E6F4EA; border: 1px solid #2E844A; }
+.difficulty-medium { color: #B78100; background: #FFF3CD; border: 1px solid #FFB01F; }
+.difficulty-high { color: #EA001E; background: #FDE7E9; border: 1px solid #EA001E; }
+
+
+/* 1. Define the Heartbeat */
+@keyframes slowHeartbeat {
+    0% { transform: scale(1); }
+    10% { transform: scale(1.08); } /* Slightly larger pop */
+    20% { transform: scale(1); }
+    30% { transform: scale(1.08); }
+    40% { transform: scale(1); }
+    100% { transform: scale(1); } /* Long pause from 40% to 100% */
+}
+
+/* 2. Apply it to the High Difficulty class */
+/* 2. Apply it with a 3-second duration */
+.difficulty-high {
+    color: #EA001E;
+    background: #FDE7E9;
+    border: 1px solid #EA001E;
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 700;
+    
+    /* Changed from 1.5s to 3s for a professional "slow" feel */
+    animation: slowHeartbeat 3s ease-in-out infinite;
+    
+    /* Optional: Add a very soft red glow that fades with the beat */
+    box-shadow: 0 2px 10px rgba(234, 0, 30, 0.1);
+}
+
+/* Optional: Add a subtle glow pulse to match the heartbeat */
+@keyframes pulse-glow {
+    0% { box-shadow: 0 0 0 0 rgba(234, 0, 30, 0.4); }
+    70% { box-shadow: 0 0 0 6px rgba(234, 0, 30, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(234, 0, 30, 0); }
+}
+
+/* If you want the glow too, combine them: */
+.difficulty-high {
+    animation: heartbeat 1.5s ease-in-out infinite, pulse-glow 1.5s infinite;
+}
+/* 1. Fix Dropdown Stacking (The Overlay Issue) */
+.filters-section {
+    position: relative;
+    z-index: 100; /* Higher than projects */
+    overflow: visible !important; /* Crucial for dropdown visibility */
+}
+
+/* 2. Responsive Filters (Fixes Clear All on Mobile) */
+.filters-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on mobile */
+    gap: 1rem;
+    align-items: flex-end;
+}
+
+.filter-group {
+    flex: 1 1 200px; /* Grows but maintains a minimum width */
+    min-width: 0; /* Prevents long text from breaking layout */
+}
+
+.clear-filters-btn {
+    flex: 0 0 auto;
+    width: auto;
+    margin-top: 10px; /* Spacing for when it wraps on mobile */
+}
+
+/* 3. Project Grid Layout */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    z-index: 1; /* Keep below filters */
+}
+
+/* 4. Fix Overlapping Description/Buttons */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensures all cards in a row are same height */
+    justify-content: space-between; /* Pushes links to the bottom */
+}
+
+.card-content {
+    flex-grow: 1; /* Takes up remaining space above buttons */
+    margin-bottom: 1.5rem;
+}
+
+.project-description {
+    color: var(--th-slate-text);
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+/* 5. YouTube Button Styling */
+.youtube-btn {
+    background: #FF0000; /* YouTube Red */
+    color: white;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+}
+
+.youtube-btn:hover {
+    background: #CC0000;
+    transform: translateY(-2px);
+}
+
+/* Link Container Layout */
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: auto; /* Solidifies the 'pinned to bottom' look */
+}
+
+.github-btn {
+    background: #333a41; /* Soft Charcoal */
+    box-shadow: 0 4px 15px rgba(51, 58, 65, 0.2);
+}
+
+.github-btn:hover {
+    background: #24292e; /* Darkens slightly on hover */
+    transform: translateY(-2px);
+}
+
+.hero-stats {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: rgb(129 129 200);
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    align-content: flex-start;
+    justify-content: space-evenly;
+}
+
+.hero-size {
+    color: #0913b7;
+    /* Removed block properties to let it stay inline */
+}
+
+.project-description {
+    color: var(--th-slate-text); /* Existing color */
+    line-height: 1.6;           /* Existing line-height */
+    margin-top: 1rem;           /* Existing margin */
+    height: 150px;            /* Set a fixed height for all tiles */
+    overflow-y: auto;           /* Show scroll bar only if text is too long */
+    padding-right: 8px;    
+    font-size: 0.9rem;     /* Adds space so text doesn't hit the scroll bar */
+}
+
+/* Optional: Custom Scrollbar to match Salesforce Blue */
+.project-description::-webkit-scrollbar {
+    width: 6px;
+}
+
+.project-description::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.project-description::-webkit-scrollbar-thumb {
+    background: var(--th-blue-primary); /* Uses your Salesforce Blue */
+    border-radius: 10px;
+}
+
+.project-description::-webkit-scrollbar-thumb:hover {
+    background: var(--th-blue-dark); /* Darker blue on hover */
+}

@@ -1,0 +1,48 @@
+<!--
+ @description       : 
+ @author            : Venkatesh M
+ @group             : 
+ @last modified on  : 03-30-2026
+ @last modified by  : Venkatesh M
+-->
+<template>
+    <section class="skills-section">
+        <!-- Animated Background -->
+        <div class="skills-bg-animation"></div>
+        
+        <div class="section-header">
+            <div class="title-container">
+                <!-- <div class="icon-wrapper">
+                    <img src={heroImage} alt="Einstein AI" class="einstein-icon" />
+                    <div class="icon-shadow"></div>
+                </div> -->
+                
+                <h2 class="section-title">
+                    <span class="gradient-text">Skills & </span> Expertise
+                </h2>
+            </div>
+        </div>
+        
+        <div class="skills-list">
+            <template for:each={skills} for:item="skill">
+                <div key={skill.Id} class="skill-row" style-animation={skill.animationDelay}>
+                    <div class="skill-left">
+                        <div class="skill-icon-container">
+                            <div class="custom-skill-icon">
+                                <img src={skill.skillIcon}>
+                            </div> 
+                        </div>
+                        <span class="skill-name">{skill.Name}</span>
+                    </div>
+                    <div class="skill-right">
+                        <div class="progress-wrapper tick-20 tick-40 tick-60 tick-80 tick-100">
+                            <div class="progress-track">
+                                <div class="progress-fill" style={skill.style}></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </section>
+</template>

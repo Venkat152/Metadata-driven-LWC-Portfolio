@@ -1,0 +1,33 @@
+<!--
+  @description       : 
+  @author            : Venkatesh M
+  @group             : 
+  @last modified on  : 03-30-2026
+  @last modified by  : Venkatesh M
+-->
+<template>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class={iconClass} onclick={toggleMenu}>
+                <img src={naviIcon} alt="Menu" class="nav-icon-img nv-icon"/>
+            </div>
+
+            <div class="badge-wrapper">
+                <c-live-portfolio-badge></c-live-portfolio-badge>
+            </div>
+
+            <div class="home-icon-container hide-on-desktop" onclick={navigateToContact}>
+                <img src={homeIcon} alt="Home" class="nav-icon-img"/>
+            </div>
+
+            <ul class={menuClass}>
+                <li onclick={navigateToHome}>HOME</li>
+                <li onclick={navigateToProjects}>PROJECTS</li>
+                <li onclick={navigateToSkills}>SKILLS</li>
+                <li onclick={navigateToCerts}>CERTIFICATIONS</li>
+                <li onclick={navigateToResume}>RESUME</li>
+                <li onclick={navigateToContact}>CONTACT</li>
+            </ul>
+        </div>
+    </nav>
+</template>

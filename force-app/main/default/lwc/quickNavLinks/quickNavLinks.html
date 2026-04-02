@@ -1,0 +1,56 @@
+<!--
+ @description       : 
+ @author            : Venkatesh M
+ @group             : 
+ @last modified on  : 03-28-2026
+ @last modified by  : Venkatesh M
+-->
+<template>
+    <section class="quick-nav-section">
+        <div class="section-container">
+            <h2 class="section-title">Quick Links</h2>            
+            
+            <div class="nav-grid">
+                <!-- Projects -->
+                <button onclick={navigateToProjects} class="nav-card projects-card">
+                    <div class="card-icon">💻</div>
+                    <h3>Projects</h3>
+                    <p>50+ Salesforce implementations with LWC, Apex & Data Cloud</p>
+                    <div class="card-arrow">→</div>
+                </button>
+
+                <!-- Skills -->
+                <button onclick={navigateToSkills} class="nav-card skills-card">
+                    <div class="card-icon">⭐</div>
+                    <h3>Skills</h3>
+                    <p>Full-stack Salesforce expertise</p>
+                    <div class="card-arrow">→</div>
+                </button>
+
+                <!-- Certifications -->
+                <button onclick={navigateToCerts} class="nav-card certs-card">
+                    <div class="card-icon">🏆</div>
+                    <h3>Certifications</h3>
+                    <p>Salesforce certifications including Agentforce</p>
+                    <div class="card-arrow">→</div>
+                </button>
+
+                <!-- Resume -->
+                <button onclick={navigateToResume} class="nav-card resume-card">
+                    <div class="card-icon">📄</div>
+                    <h3>Resume</h3>
+                    <p>View my  resume</p>
+                    <div class="card-arrow">→</div>
+                </button>
+
+                <!-- Contact -->
+                <button onclick={navigateToContact} class="nav-card contact-card">
+                    <div class="card-icon">📧</div>
+                    <h3>Contact</h3>
+                    <p>Get in touch</p>
+                    <div class="card-arrow">→</div>
+                </button>
+            </div>
+        </div>
+    </section>
+</template>

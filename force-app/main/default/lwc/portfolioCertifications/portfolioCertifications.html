@@ -1,0 +1,110 @@
+<!--
+  @description       : 
+  @author            : Venkatesh M
+  @group             : 
+  @last modified on  : 03-30-2026
+  @last modified by  : Venkatesh M
+-->
+<template>
+    <section class="certs-container">
+        <div class="certs-header">
+            <div class="header-left">
+                <!-- <img src={logo1} alt="Certifications Icon" class="certs-icon"/> -->
+                <h1 class="certs-title">{certTitle}</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-container">
+                    <lightning-input 
+                        type="search" 
+                        placeholder="Quick search"
+                        class="search-input"
+                        onchange={handleSearch}>
+                    </lightning-input>
+                </div>
+                <div class="sort-container">
+                    <lightning-combobox
+                        dropdown-length="4"
+                        placeholder="Sort by Status"
+                        class="sort-select"
+                        options={sortOptions}
+                        onchange={handleSort}>
+                    </lightning-combobox>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-section">
+            <div class="accordion-header active" onclick={toggleSalesforce} role="button" tabindex="0">
+                <div class="accordion-header-content">
+                    <img src={salesforceSectionIcon} alt="Salesforce" class="section-icon"/>
+                    <div class="accordion-title">
+                        <h2 class="section-title">{salesforceCertsTitle}</h2>
+                    </div>
+                </div>
+                <lightning-icon 
+                    icon-name={salesforceChevronIcon} 
+                    size="small" 
+                    class="chevron-icon">
+                </lightning-icon>
+            </div>
+            <div class={salesforceContentClass}>
+                <template for:each={filteredSalesforceCerts} for:item="cert">
+                    <div key={cert.id} class="cert-card">
+                        <div class="cert-badge">
+                            <img src={cert.imageUrl} alt={cert.Name} class="badge-img"/>
+                        </div>
+                        <div class="cert-content">
+                            <div class="cert-main">
+                                <h3 class="cert-name">{cert.Name}</h3>
+                                <span class="cert-status active">Active</span>
+                            </div>
+                            <div class="cert-issued">Issued {cert.issuedMonthYear}</div>
+                            <div class="cert-provider">{cert.Category__c}</div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+
+        <div class="accordion-section">
+            <div class="accordion-header" onclick={toggleOther} role="button" tabindex="0">
+                <div class="accordion-header-content">
+                    <img src={otherCoursesSectionIcon} alt="Other" class="section-icon"/>
+                    <div class="accordion-title">
+                        <h2 class="section-title">{otherCertsTitle}</h2>
+                    </div>
+                </div>
+                <lightning-icon 
+                    icon-name={otherChevronIcon} 
+                    size="small" 
+                    class="chevron-icon">
+                </lightning-icon>
+            </div>
+            <div class={otherContentClass}>
+                <template if:true={filteredOther.length}>
+                    <template for:each={filteredOther} for:item="cert">
+                        <div key={cert.Id} class="cert-card">
+                            <div class="cert-badge">
+                                <img src={cert.imageUrl} alt={cert.Name} class="badge-img"/>
+                            </div>
+                            <div class="cert-content">
+                                <div class="cert-main">
+                                    <h3 class="cert-name">{cert.Name}</h3>
+                                    <span class="cert-status active">Active</span>
+                                </div>
+                                <div class="cert-issued">Issued {cert.issuedMonthYear}</div>
+                                <div class="cert-provider">{cert.Source__c}</div>
+                            </div>
+                        </div>
+                    </template>
+                </template>
+                <template if:false={filteredOther.length}>
+                    <div class="empty-state">
+                        <lightning-icon icon-name="utility:add" size="large" class="empty-icon"></lightning-icon>
+                        <p class="empty-text">No other certifications to display.</p>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </section>
+</template>

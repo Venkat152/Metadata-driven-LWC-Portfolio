@@ -1,0 +1,108 @@
+<!--
+  @description       : 
+  @author            : Venkatesh M
+  @group             : 
+  @last modified on  : 03-30-2026
+  @last modified by  : Venkatesh M
+-->
+<template>
+    <div class="contact-page">
+        <section class="hero-section">
+            <div class="particles-bg">
+                <div class="particle particle-1"></div>
+                <div class="particle particle-2"></div>
+                <div class="particle particle-3"></div>
+                <div class="particle particle-4"></div>
+                <div class="particle particle-5"></div>
+                <div class="particle particle-6"></div>
+            </div>
+           
+            <div class="hero-content">
+                <h1>Get In<span class="gradient-text"> Touch</span></h1>
+                <p>Ready to build something amazing together? Feel free to reach out!</p>
+            </div>
+           
+            <div class="quick-actions">
+                <a href={emailUrl} class="action-btn email-btn">
+                    <span class="icon-wrapper">✉️</span> Email Me
+                </a>
+                <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" class="action-btn linkedin-btn">
+                    <span class="icon-wrapper brand-icon">in</span> LinkedIn
+                </a>
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="action-btn whatsapp-btn">
+                    <span class="icon-wrapper">💬</span> WhatsApp
+                </a>
+                <a href={youtubeUrl} target="_blank" rel="noopener noreferrer" class="action-btn youtube-btn">
+                    <span class="icon-wrapper">▶️</span> Youtube
+                </a>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <div class="cards-container">
+                <div class="contact-card">
+                    <div class="card-icon email-icon">✉️</div>
+                    <h3>Email</h3>
+                    <p>{accountEmail}</p>
+                    <a href={emailUrl} class="card-link">Send Message →</a>
+                </div>
+        
+                <div class="contact-card">
+                    <div class="card-icon phone-icon">📞</div>
+                    <h3>Phone</h3>
+                    <p>{accountPhone}</p>
+                    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="card-link">Call / WhatsApp →</a>
+                </div>
+        
+                <div class="contact-card">
+                    <div class="card-icon location-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>{accountLocation}</p>
+                    <a href={mapUrl} target="_blank" rel="noopener noreferrer" class="card-link">View on Map →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="form-wrapper">
+                <div class="form-container">
+                    <div class="form-header">
+                        <div class="form-icon">✉️</div>
+                        <h2>Send me a <span class="gradient-text">Message</span></h2>
+                    </div>
+
+                    <div class="floating-form-card">
+                        <div class="form-fields">
+                            <div class="input-row">
+                                <div class="form-group">
+                                    <label class="floating-label">Full Name</label>
+                                    <lightning-input name="name" value={formData.name} onchange={handleInputChange} class="floating-input"></lightning-input>
+                                </div>
+                                <div class="form-group">
+                                    <label class="floating-label">Email</label>
+                                    <lightning-input name="email" type="email" value={formData.email} onchange={handleInputChange} class="floating-input"></lightning-input>
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label class="floating-label">Subject</label>
+                                <lightning-input name="subject" value={formData.subject} onchange={handleInputChange} class="floating-input"></lightning-input>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label class="floating-label">Your Message</label>
+                                <lightning-textarea name="message" value={formData.message} onchange={handleInputChange} rows="6" class="floating-textarea"></lightning-textarea>
+                            </div>
+                        </div>
+
+                        <div class="submit-section">
+                            <lightning-button label="Send Message 🚀" disabled ="true"  onclick={handleSubmit} variant="brand" class="premium-submit-btn"></lightning-button>
+                        </div>
+                        <span> Contact Form Functionality not yet implemented in Backend ,it will available soon</span>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</template>

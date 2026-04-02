@@ -1,0 +1,25 @@
+<template>
+    <div class="resume-hero-container">
+        <!-- Background Layer with Characters -->
+        <div class="bg-image-layer">
+            <img src={einsteinImg} class="floating-obj einstein" alt="Einstein Character" />
+            <img src={catImg} class="floating-obj cat" alt="Codey Cat" />
+            <img src={agentImg} class="floating-obj agent" alt="Agentforce Character" />
+        </div>
+
+        <!-- Content Layer -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="resume-heading">My Professional Resume</h1>
+                <p class="resume-subtext">
+                    Ready to explore my full journey in Salesforce development?
+                </p>
+                
+                <button class="download-btn" onclick={handleDownload}>
+                    <span class="btn-icon">📄</span> 
+                    View Resume
+                </button>
+            </div>
+        </section>
+    </div>
+</template>

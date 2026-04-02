@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Agentforce Prompt POC",
+    "date": "Mar 2026",
+    "difficulty": "High",
+    "tech": ["Agentforce", "Prompt Templates", "Apex"],
+    "website": "https://your-site.com/agentforce-poc",
+    "github": "https://github.com/venkat/agentforce-poc",
+    "youtube": "https://youtube.com/watch?v=agentforce-demo",
+    "description": "Built AI-powered customer service bot using Agentforce prompt engineering and Apex integration."
+  },
+  {
+    "name": "Data Cloud Sync Flow",
+    "date": "Feb 2026",
+    "difficulty": "Medium",
+    "tech": ["Data Cloud", "Flows", "Integration"],
+    "website": "https://your-site.com/datacloud-sync",
+    "github": "https://github.com/venkat/datacloud-flow",
+    "youtube": "",
+    "description": "Real-time Salesforce-Data Cloud synchronization using record-triggered flows and REST APIs."
+  },
+  {
+    "name": "Apex Batch Optimizer",
+    "date": "Jan 2026",
+    "difficulty": "High",
+    "tech": ["Apex", "Batch", "LWC"],
+    "website": "https://your-site.com/batch-optimizer",
+    "github": "https://github.com/venkat/apex-batch",
+    "youtube": "https://youtube.com/watch?v=batch-demo",
+    "description": "Optimized Apex batch processing with LWC dashboard - 75% performance improvement."
+  },
+  {
+    "name": "LWC Multi-Step Wizard",
+    "date": "Dec 2025",
+    "difficulty": "Medium",
+    "tech": ["LWC", "Flows"],
+    "website": "",
+    "github": "https://github.com/venkat/lwc-wizard",
+    "youtube": "",
+    "description": "Reusable multi-step form wizard with validation and Flow integration."
+  },
+  {
+    "name": "External API Integration",
+    "date": "Nov 2025",
+    "difficulty": "Low",
+    "tech": ["Integration", "Apex", "REST"],
+    "website": "",
+    "github": "https://github.com/venkat/api-integration",
+    "youtube": "",
+    "description": "Secure external API integration with Named Credentials and error handling."
+  }
+]

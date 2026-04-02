@@ -1,0 +1,266 @@
+/* --- Trailblazer Platinum Theme: Certifications Module --- */
+:host {
+    --th-blue-primary: #0176D3;
+    --th-blue-dark: #032D60;
+    --th-sky-bg: #F3F9FE;
+    --th-slate-text: #475569;
+    --th-glass: rgba(255, 255, 255, 0.9);
+    --th-green-success: #2E844A;
+}
+
+.certs-container {
+    margin-top: 50px;
+    background: var(--th-sky-bg);
+    background-image: 
+        linear-gradient(rgba(1, 118, 211, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(1, 118, 211, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    min-height: 100vh;
+    padding: 1rem 0.7rem;
+        font-family: 'Salesforce Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* --- Header Section --- */
+.certs-header {
+    max-width: 1100px;
+    margin: 0 auto 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(1, 118, 211, 0.1);
+    padding-bottom: 1.5rem;
+}
+
+/* --- Header Alignment Fix --- */
+.header-left {
+    display: flex;
+    align-items: center; /* Vertically centers the icon and text */
+    gap: 1rem; /* Space between the icon and the text */
+}
+
+.certs-icon {
+    width: auto;
+    height: 5.5rem; /* Matches your current height requirement */
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.header-left h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 0;
+    background: linear-gradient(135deg, var(--th-blue-dark) 0%, var(--th-blue-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.03em;
+    /* Removed display: flex from here as it's now handled by the parent */
+}
+
+.header-right {
+    display: flex;
+    gap: 1.2rem;
+}
+
+/* --- Premium Accordion Section --- */
+.accordion-section {
+    max-width: 1100px;
+    margin: 0 auto 1.5rem;
+    background: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(1, 118, 211, 0.05);
+    transition: all 0.3s ease;
+}
+
+.accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* This pushes title and chevron apart */
+    padding: 1.5rem 2rem 1.5rem 1rem;
+    cursor: pointer;
+    background: white;
+    transition: background 0.2s ease;
+}
+
+.accordion-header:hover {
+    background: #F8FAFC;
+}
+
+.accordion-header.active {
+    border-bottom: 1px solid #F1F5F9;
+}
+
+/* Grouping container for Icon + Titles */
+.accordion-header-content {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Occupies all space to force chevron to the right */
+}
+
+.section-icon {
+    height: 60px;
+    width: auto;
+    flex-shrink: 0;
+    object-fit: contain;
+    margin-right: 1rem;
+
+}
+
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--th-blue-dark);
+    margin: 0;
+}
+
+.section-subtitle {
+    color: var(--th-slate-text);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.chevron-icon {
+    --slds-c-icon-color-foreground-default: var(--th-blue-primary);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 1rem;
+}
+
+/* --- Certification Cards --- */
+.accordion-content {
+    max-height: 0;
+    padding: 0 1rem;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-content.expanded {
+    max-height: 2500px;
+    padding: 0 1rem 1rem;
+}
+
+.cert-card {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    background: #FFFFFF;
+    border: 1px solid #F1F5F9;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateX(10px);
+    border-color: var(--th-blue-primary);
+    box-shadow: 0 8px 20px rgba(1, 118, 211, 0.08);
+}
+
+.cert-badge {
+    margin-right: 2rem;
+    flex-shrink: 0;
+}
+
+.badge-img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+}
+
+.cert-content {
+    flex: 1;
+}
+
+.cert-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cert-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--th-blue-dark);
+    margin: 0;
+}
+
+.cert-status.active {
+    background: #E6F4EA;
+    color: var(--th-green-success);
+    border: 1px solid rgba(46, 132, 74, 0.2);
+    padding: 0.4rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.cert-issued {
+    color: var(--th-slate-text);
+    font-size: 0.95rem;
+    margin: 0.3rem 0;
+    font-weight: 500;
+}
+
+.cert-provider {
+    color: var(--th-blue-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    /* text-transform: uppercase; */
+    letter-spacing: 0.02em;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    color: var(--th-slate-text);
+}
+
+@media (max-width: 768px) {
+    .certs-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    .cert-card {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+    .cert-badge {
+        margin-bottom: 1rem;
+    }
+    .cert-status {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+}
+
+/* --- Responsive Mobile Adjustment (Screens < 768px) --- */
+@media (max-width: 767px) {
+    .header-left {
+        /* 1. Stack them vertically */
+        flex-direction: column;
+        
+        /* 2. Vertically center the stacked group */
+        align-items: center;
+        justify-content: center;
+        
+        /* 3. Add space below the icon so it doesn't touch the text */
+        gap: 0.75rem;
+        
+        /* 4. Ensure the group stays centered on the page */
+        text-align: center;
+        width: 100%;
+    }
+
+    /* 5. Optional: Shrink the title font slightly so it doesn't wrap awkwardly */
+    .header-left h1 {
+        font-size: 2.2rem;
+        line-height: 1.1;
+    }
+}

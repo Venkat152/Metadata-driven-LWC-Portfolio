@@ -1,0 +1,414 @@
+:host {
+    --th-blue: #00a1e0;
+    --th-navy: #032d60; /* Official Salesforce Navy */
+    --th-text-light: #f4f6f9;
+    --white: #ffffff;
+}
+
+.th-footer {
+    position: relative;
+    background-color: var(--th-navy);
+    color: var(--th-text-light);
+    font-family: 'Salesforce Sans', Arial, sans-serif;
+    padding-bottom: 40px;
+}
+
+/* 1. The Curve Fix */
+.footer-curve {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.footer-curve svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+}
+
+.footer-curve .shape-fill {
+    fill: var(--th-navy); /* Matches footer background */
+}
+
+.footer-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 2. Grid Layout */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 80px;
+    padding: 60px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.avatar-circle {
+    width: 60px;
+    height: 60px;
+    background: var(--th-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.user-name {
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.user-role {
+    color: var(--th-blue);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+.user-bio {
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 500px;
+}
+
+/* 3. Link Buttons (Perfectly Aligned) */
+.nav-title {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.link-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.th-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.th-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: var(--th-blue);
+}
+
+.th-btn:hover {
+    background: var(--th-blue);
+    border-color: var(--th-blue);
+    transform: translateY(-3px);
+}
+
+.th-btn:hover svg {
+    fill: white;
+}
+
+/* 4. Bottom Bar & Highlighted Scroll */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.scroll-top-btn {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: var(--th-blue);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-top-btn svg {
+    width: 24px;
+    fill: white;
+}
+
+.scroll-pulse {
+    position: absolute;
+    inset: -5px;
+    border: 2px solid var(--th-blue);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+:host {
+    --th-blue: #00a1e0;
+    --th-navy: #032d60; 
+    --th-text-light: #f4f6f9;
+    --white: #ffffff;
+    /* Custom Timing for a "Smooth" feel */
+    --ease-out: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.th-footer {
+    position: relative;
+    background-color: var(--th-navy);
+    color: var(--th-text-light);
+    font-family: 'Salesforce Sans', Arial, sans-serif;
+    padding-bottom: 40px;
+    overflow: hidden; /* Clips any animation overflow */
+}
+
+/* 1. Subtle Fade-In for the entire content */
+.footer-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    animation: fadeIn 1.2s var(--ease-out);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 2. Grid & Profile Animation */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 80px;
+    padding: 60px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.avatar-circle {
+    width: 60px;
+    height: 60px;
+    background: var(--th-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+    /* Soft Breathing Effect */
+    box-shadow: 0 0 0 rgba(0, 161, 224, 0.4);
+    animation: profileGlow 3s infinite ease-in-out;
+}
+
+@keyframes profileGlow {
+    0% { box-shadow: 0 0 0 0px rgba(0, 161, 224, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(0, 161, 224, 0); }
+    100% { box-shadow: 0 0 0 0px rgba(0, 161, 224, 0); }
+}
+
+/* 3. Link Buttons Stagger & Hover */
+.link-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.th-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.4s var(--ease-out);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Shine effect on Hover */
+.th-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: 0.5s;
+}
+
+.th-btn:hover::after {
+    left: 100%;
+}
+
+.th-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--th-blue);
+    transform: translateX(5px); /* Professional side-nudge */
+}
+
+/* 4. Scroll Button Enhancements */
+.scroll-top-btn {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: var(--th-blue);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s var(--ease-out), background 0.3s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-top-btn:hover {
+    transform: translateY(-5px) scale(1.1);
+    background: #0089bd; /* Slightly darker on hover */
+}
+
+.scroll-top-btn svg {
+    width: 24px;
+    fill: white;
+}
+
+/* Pulse is already great, just refined the speed */
+.scroll-pulse {
+    position: absolute;
+    inset: -5px;
+    border: 2px solid var(--th-blue);
+    border-radius: 50%;
+    animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(1.6); opacity: 0; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+.particle-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none; /* Allows clicks to pass through to buttons */
+    z-index: 0;
+}
+
+.particle {
+    position: absolute;
+    background: var(--th-blue);
+    border-radius: 50%;
+    opacity: 0.15;
+    filter: blur(2px);
+    animation: floatAround 20s infinite linear;
+}
+
+/* Individual Particle Settings */
+.p1 { width: 10px; height: 10px; top: 20%; left: 10%; animation-duration: 25s; }
+.p2 { width: 15px; height: 15px; top: 60%; left: 80%; animation-duration: 30s; opacity: 0.1; }
+.p3 { width: 8px; height: 8px; top: 40%; left: 50%; animation-duration: 22s; }
+.p4 { width: 12px; height: 12px; top: 80%; left: 20%; animation-duration: 28s; opacity: 0.08; }
+.p5 { width: 6px; height: 6px; top: 10%; left: 70%; animation-duration: 18s; }
+
+/* The "Wandering" Animation */
+@keyframes floatAround {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(30px, 50px) rotate(120deg); }
+    66% { transform: translate(-20px, 80px) rotate(240deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+/* Ensure content stays above particles */
+.footer-container {
+    position: relative;
+    z-index: 1;
+    /* ... keep your existing animations ... */
+}
+
+/* ... keep your existing desktop styles ... */
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center; /* Centers all text for a balanced mobile look */
+    }
+
+    .profile-header {
+        flex-direction: column; /* Stacks avatar on top of the name */
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .user-bio {
+        margin: 0 auto; /* Centers the bio text */
+    }
+
+    .link-grid {
+        /* Optional: keeps buttons side-by-side or stacks them */
+        grid-template-columns: 1fr; 
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    /* Trailhead-style floating animation for the mobile avatar */
+    .avatar-circle {
+        animation: mobileFloat 3s ease-in-out infinite;
+    }
+}
+
+@keyframes mobileFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}

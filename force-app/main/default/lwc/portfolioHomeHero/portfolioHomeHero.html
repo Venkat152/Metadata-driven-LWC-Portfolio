@@ -1,0 +1,63 @@
+<!--
+  @description       : 
+  @author            : Venkatesh M
+  @group             : 
+  @last modified on  : 03-30-2026
+  @last modified by  : Venkatesh M
+-->
+<template>
+    <section class="home-hero">
+        <div class="hero-bg-grid"></div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="intro-text">Hi, I'm </span><span class="gradient-name">{name}</span>
+                    <br>
+                    <span class="subtitle">{designation}</span>
+                </h1>
+                
+                <p class="hero-description">{description}</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">{projectsCount}</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">{experience}</div>
+                        <div class="stat-label">Years Exp</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">{certificationsCount}</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <lightning-button label="View Projects" variant="brand" class="cta-primary" onclick={navigateToProjects}></lightning-button>
+                    <lightning-button label="Get In Touch" variant="neutral" class="cta-secondary" onclick={navigateToContact}></lightning-button>
+                </div>
+                
+                <div class="hero-tech-stack">
+                    <template for:each={skills} for:item="skill">
+                        <span key={skill} class="tech-item">{skill}</span>
+                    </template>
+                </div>
+            </div>
+            
+            <div class="hero-image-section">
+                <div class="image-container">
+                    <div class="profile-image-bg">
+                        <img src={heroImage} alt="Venkatesh" class="profile-image">
+                    </div>
+                    
+                    <div class="achievement-badges">
+                        <img src={rangerBadge} class="badge-icon ranger" alt="Ranger">
+                        <img src={agentblazerBadge} class="badge-icon agentblazer" alt="Agentblazer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>

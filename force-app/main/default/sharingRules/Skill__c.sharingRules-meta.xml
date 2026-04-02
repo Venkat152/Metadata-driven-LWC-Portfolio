@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingGuestRules>
+        <fullName>Share_Portfolio_Data</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share_Portfolio_Data</label>
+        <sharedTo>
+            <guestUser>Venkatesh_portfolio</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeHVUOwnedRecords>true</includeHVUOwnedRecords>
+    </sharingGuestRules>
+</SharingRules>

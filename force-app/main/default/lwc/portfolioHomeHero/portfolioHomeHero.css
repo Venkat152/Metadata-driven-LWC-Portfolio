@@ -1,0 +1,292 @@
+.home-hero {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 80px 0;
+    background: radial-gradient(circle at 52% 144%, #ffffff 16%, #ffffff 38%, #f3f9fe 44%, #d6eeff 100%);
+    z-index: 1;
+}
+
+.hero-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(rgba(1, 118, 211, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(1, 118, 211, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.hero-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+/* --- Content Styling --- */
+.hero-content {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.hero-title {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 800;
+    color: #032d60;
+    line-height: 1.1;
+}
+
+.intro-text {
+    color: #1e293b; /* Darker slate for readability on light blue */
+}
+
+.gradient-name {
+    background: linear-gradient(135deg, #0176d3, #1798c1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    display: block;
+    font-size: 1.3rem;
+    color: #0070d2;
+    margin-top: 10px;
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    color: #475569;
+    margin: 1.5rem 0 2.5rem 0;
+    max-width: 550px;
+}
+
+/* --- Stats & Tech --- */
+.hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.stat-number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #032d60;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: #64748b;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero-tech-stack {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.tech-item {
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border: 1px solid rgba(1, 118, 211, 0.2);
+}
+
+/* --- Image & Badges --- */
+.image-container {
+    position: relative;
+    aspect-ratio: 1/1;
+    margin: 0 auto;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid white;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.badge-icon {
+    position: absolute;
+    width: 75px;
+    filter: drop-shadow(0 8px 15px rgba(0,0,0,0.15));
+}
+
+.badge-icon.ranger { bottom: 5%; left: -10%; }
+.badge-icon.agentblazer { top: 10%; right: -10%; }
+
+/* --- Responsive & "Desktop-on-Mobile" Fix --- */
+@media (max-width: 1024px) {
+    .home-hero {
+        padding: 60px 0;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        min-height: 800px;
+        margin-top:3%;
+    }
+    
+    .hero-image-section {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+
+    .hero-stats, .hero-buttons, .hero-tech-stack {
+        justify-content: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* --- Badges Container: Layer 5 above image --- */
+.achievement-badges {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none; /* Allows clicks to pass through to the image behind */
+}
+
+/* Individual Badge Styling: Positioning and Shadow */
+.badge-icon {
+    position: absolute;
+    width: 85px; /* Size of the badges */
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.25));
+        pointer-events: auto; /* Re-enables cli  cking the badge if needed */
+    cursor: pointer;
+}
+
+/* --- Positioning Ranger: Bottom-Left Orbit --- */
+.badge-icon.ranger {
+        bottom: 6%;
+        left: -13%;
+    animation: floatBadgeRanger 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 15px rgba(0, 112, 210, 0.5)); /* Salesforce standard blue */}
+
+/* --- Positioning Agentblazer: Top-Right Orbit --- */
+.badge-icon.agentblazer {
+    top: 73%;
+    right: -15%;
+    height: 6.5rem;
+    width: auto;
+    animation: floatBadgeAgentblazer 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 15px rgba(160, 32, 240, 0.5)); /* Salesforce AI purple */
+}
+
+/* --- Floating Animation: Ranger (Starts at y=0) --- */
+@keyframes floatBadgeRanger {
+    0%, 100% {
+        transform: translateY(0) rotate(-2deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(2deg);
+    }
+}
+
+/* --- Floating Animation: Agentblazer (Starts slightly higher for contrast) --- */
+@keyframes floatBadgeAgentblazer {
+    0%, 100% {
+        transform: translateY(-5px) rotate(2deg);
+    }
+    50% {
+        transform: translateY(10px) rotate(-2deg);
+    }
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 1024px) {
+    .profile-image-bg{
+        border: 3px solid rgba(255, 255, 255, 0.8);
+    }
+    .badge-icon {
+        width: 65px;
+    }
+    
+    .badge-icon.ranger {
+        bottom: -4%;
+        left: -7%;
+    }
+    
+    .badge-icon.agentblazer {
+        top: 81%;
+        right: -5%;
+        height: 5rem;
+    }
+    .hero-image-section {
+        order: -1;
+        margin-bottom: 3rem;
+        width: 100%; /* Ensure the section takes full width */
+        display: flex;
+        justify-content: center; /* Center the container inside the section */
+    }
+
+    .image-container {
+        width: 280px; /* Constrain the size on mobile */
+        height: 280px;
+        margin: 0 auto; /* Force horizontal centering */
+        position: relative;
+    }
+}
+
+
+/* Circular background for the profile photo */
+.profile-image-bg {
+    /* PROFESSIONAL SALESFORCE GRADIENT: Soft Blue to White */
+    background: linear-gradient(135deg, #D6EEFF 0%, #FFFFFF 100%);
+    border-radius: 50%;
+    overflow: hidden; 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Subtle border to separate from the blue background grid */
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    /* Deeper shadow for a floating effect */
+    box-shadow: 0 15px 35px rgba(0, 112, 210, 0.15);
+    transition: transform 0.3s ease;
+}
+
+/* Optional: Slight lift effect when hovering over the photo */
+.profile-image-bg:hover {
+    transform: translateY(-5px);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
