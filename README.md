@@ -24,7 +24,7 @@ This project showcases a production-grade, maintainable architecture where all c
 - **Frontend**: Lightning Web Components (LWC), LWR
 - **Backend**: Apex, Custom Metadata Types
 - **Platform**: Salesforce Experience Cloud (Experience Site)
-- **Other**: Triggers, Configuration
+- **Other**: Triggers, Configuration, Sharing Rules 
 
 ## 📋 Project Highlights
 
@@ -119,4 +119,4 @@ Activate and configure the Experience Site
 
 
 Built with ❤️ by Venkatesh M
-Salesforce Developer | Hyderabad
+Salesforce Developer | India
