@@ -99,7 +99,6 @@ metadata-driven-lwc-portfolio/
   <h3 style="display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 700; color: #58a6ff; margin: 0 0 20px 0; border-bottom: 1px solid #30363d; padding-bottom: 12px;">🏗️ Architecture Highlights</h3>
   
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
-    
     <div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; transition: all 0.2s ease;">
       <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
         <div style="width: 36px; height: 36px; background: rgba(88,166,255,0.1); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 16px;">⚙️</div>
@@ -113,7 +112,6 @@ metadata-driven-lwc-portfolio/
         • Business-managed via Admin UI
       </div>
     </div>
-
     <div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; transition: all 0.2s ease;">
       <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
         <div style="width: 36px; height: 36px; background: rgba(63,185,80,0.1); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 16px;">🧱</div>
@@ -127,7 +125,6 @@ metadata-driven-lwc-portfolio/
         • Enterprise maintainability
       </div>
     </div>
-
     <div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; transition: all 0.2s ease;">
       <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
         <div style="width: 36px; height: 36px; background: rgba(240,136,62,0.1); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 16px;">⚡</div>
@@ -141,7 +138,6 @@ metadata-driven-lwc-portfolio/
         • Optimized SOQL patterns
       </div>
     </div>
-
     <div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; transition: all 0.2s ease;">
       <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
         <div style="width: 36px; height: 36px; background: rgba(188,140,255,0.1); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 16px;">🔒</div>
@@ -155,7 +151,6 @@ metadata-driven-lwc-portfolio/
         • Zero vulnerabilities
       </div>
     </div>
-
   </div>
 </div>
 
@@ -171,7 +166,6 @@ metadata-driven-lwc-portfolio/
         <div style="font-size: 12px; color: #8b949e;">Production-grade dynamic content</div>
       </div>
     </div>
-    
     <div style="display: flex; align-items: flex-start; gap: 12px; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px;">
       <div style="width: 8px; height: 8px; border-radius: 50%; background: #3fb950; margin-top: 6px; flex-shrink: 0;"></div>
       <div>
@@ -179,7 +173,6 @@ metadata-driven-lwc-portfolio/
         <div style="font-size: 12px; color: #8b949e;">End-to-end site architecture</div>
       </div>
     </div>
-    
     <div style="display: flex; align-items: flex-start; gap: 12px; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px;">
       <div style="width: 8px; height: 8px; border-radius: 50%; background: #f0883e; margin-top: 6px; flex-shrink: 0;"></div>
       <div>
@@ -187,7 +180,6 @@ metadata-driven-lwc-portfolio/
         <div style="font-size: 12px; color: #8b949e;">Security + performance focus</div>
       </div>
     </div>
-    
     <div style="display: flex; align-items: flex-start; gap: 12px; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px;">
       <div style="width: 8px; height: 8px; border-radius: 50%; background: #bc8cff; margin-top: 6px; flex-shrink: 0;"></div>
       <div>
