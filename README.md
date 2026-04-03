@@ -88,7 +88,7 @@ metadata-driven-lwc-portfolio/
 
 ## 📸 Mobile View
 
-<img src="screenshots/footer.png" alt="Mobile view">
+<img src="screenshots/mobile.png" alt="Mobile view">
 
 <h2>🏗️ Architecture Highlights</h2>
 
