@@ -170,8 +170,8 @@ metadata-driven-lwc-portfolio/
   <li>Activate and configure the Experience Site</li>
 </ol>
 
-<pre><code>git clone https://github.com/Venkat152/Metadata-driven-LWC-Portfolio.git;
-cd &lt;project-folder&gt;
+<pre><code>git clone https://github.com/Venkat152/Metadata-driven-LWC-Portfolio.git
+cd Metadata-driven-LWC-Portfolio;
 sf org login web --alias portfolio
 sf project deploy start
 </code></pre>
