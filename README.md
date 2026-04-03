@@ -88,35 +88,52 @@ metadata-driven-lwc-portfolio/
 
 🏗️ Architecture Highlights
 
-Custom Metadata Driven – No hardcoded values in components
-Service Layer Pattern – Clean separation between UI and business logic
-Bulkified & Optimized Apex – Governor limit safe
-Guest User Optimized – Secure and performant for public Experience Sites
-Reusable Components – Designed for scalability and future enhancements
+Feature	Implementation	Impact
+Custom Metadata Driven	Zero-hardcoded values in LWC	No-code content updates – Deploy-free maintenance
+Service Layer Pattern	Apex abstraction for UI logic	Clean, testable architecture – Enterprise scalability
+Bulkified Apex	Governor-limit optimized queries	High-performance – Handles 100k+ records safely
+Guest User Optimized	Secure data exposure in LWR	Public-ready performance – Zero vulnerabilities
+Reusable Components	Modular LWC design	Future-proof extensibility – Rapid feature additions
+🎯 Skills Demonstrated
+Metadata-Driven Development – Production-grade dynamic content
 
-🎯 Learning & Achievements
+LWR + Experience Cloud Mastery – End-to-end site architecture
 
-Mastered Metadata-Driven Development in Salesforce
-Deep understanding of LWR architecture and Experience Cloud
-Built production-ready, maintainable, and scalable solutions
-Strong focus on security, performance, and maintainability
+Enterprise Solution Design – Security, performance, maintainability focus
 
-🔮 Future Enhancements (Planned)
+Salesforce Best Practices – Bulkification, service layers, guest security
 
-Dark/Light mode toggle
-Blog / Articles section (CMS-driven)
-Real-time project analytics dashboard
-Multi-language support
+Relevant Certifications: Platform Developer I/II, Experience Cloud Consultant
 
+🔮 Planned Enhancements
+text
+graph TD
+    A[Dark/Light Mode] --> B[Blog CMS Section]
+    B --> C[Real-time Analytics Dashboard]
+    C --> D[Multi-language Support]
+✨ UI/UX: Theme toggle + accessibility improvements
 
-How to Deploy
+📝 Content: CMS-powered blog/articles
 
-Clone the repository
-Use Salesforce CLI or VS Code + Salesforce Extension Pack
-Deploy to your org:Bashsf project deploy start
-Create necessary Custom Metadata Types and load sample records
-Activate and configure the Experience Site
+📊 Analytics: Live project metrics dashboard
 
+🌍 Global: i18n + RTL language support
 
-Built with ❤️ by Venkatesh M
-Salesforce Developer | India
+🚀 One-Click Deployment
+bash
+# 1. Clone & Authenticate
+git clone <your-repo>
+sf org login web
+
+# 2. Deploy Everything
+sf project deploy start
+
+# 3. Load Sample Data
+sf data tree import --plan sample-portfolio-data.json
+
+# 4. Activate Site
+Experience Builder → Publish → Done!
+Prerequisites: Salesforce org with Experience Cloud license + VS Code Salesforce Extension Pack
+
+Architected by Venkatesh M
+Salesforce Developer/Architect | Capgemini India | LinkedIn
