@@ -64,18 +64,25 @@ metadata-driven-lwc-portfolio/
 
 1. Home / Portfolio Landing Page
 <img src="screenshots/home.png" alt="Home Page">
-3. Quick Links
+
+2. Quick Links
 <img src="screenshots/quick_actions.png" alt="Quick Actions">
+
 3. Projects Section with Filters
 <img src="screenshots/projects.png" alt="Projects with Filters">
+
 4. Skills section
 <img src="screenshots/skills.png" alt="Skills">
+
 5. Certificates
 <img src="screenshots/certificates.png" alt="Certificates">
+
 6. Resume
 <img src="screenshots/resume.png" alt="Resume">
+
 7. Contact
 <img src="screenshots/contact.png" alt="Contact">
+
 8. Footer
 <img src="screenshots/footer.png" alt="Footer">
 
