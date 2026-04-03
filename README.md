@@ -188,5 +188,5 @@ sf project deploy start
 
 <p>
   <strong>Venkatesh M</strong><br>
-  Salesforce Developer | India
+  Salesforce Developer | Capgemini | India
 </p>
