@@ -4,7 +4,6 @@ A modern, **zero-hardcode**, fully dynamic portfolio website built on **Salesfor
 
 This project showcases a production-grade, maintainable architecture where all content (projects, skills, certifications, etc.) can be updated **without any code deployment** — purely through **Custom Metadata Types**.
 
-![Project Banner](https://via.placeholder.com/1200x400/0A66C2/FFFFFF?text=Metadata-Driven+LWC+Portfolio+on+Experience+Cloud)
 
 ## ✨ Key Features
 
@@ -12,21 +11,20 @@ This project showcases a production-grade, maintainable architecture where all c
 - **Dynamic LWC Components** – Fully reactive, reusable, and performant Lightning Web Components
 - **Advanced Filtering** – Multi-dimensional filtering (Tech Stack, Difficulty, Date, etc.)
 - **Secure Guest User Experience** – Optimized Apex backend with proper sharing & security model
-- **GitHub API Integration** – Live repository stats and project showcase
 - **Fully Responsive Design** – Optimized for desktop, tablet, and mobile
 - **LWR (Lightning Web Runtime)** – Built on modern Experience Cloud architecture
 - **Enterprise-Grade Code Quality** – Clean service layer, proper separation of concerns, and maintainability focus
 
 ## 🚀 Live Demo
 
-> **Live Portfolio**: [Add your Experience Cloud site URL here]
+> **Live Portfolio**: https://ddm00000fpkymuan-dev-ed.develop.my.site.com/venkateshPortfolio/s
 
 ## 🛠️ Tech Stack
 
 - **Frontend**: Lightning Web Components (LWC), LWR
 - **Backend**: Apex, Custom Metadata Types
 - **Platform**: Salesforce Experience Cloud (Experience Site)
-- **Other**: Triggers, Configuration, GitHub REST API
+- **Other**: Triggers, Configuration
 
 ## 📋 Project Highlights
 
@@ -49,28 +47,38 @@ metadata-driven-lwc-portfolio/
 ├── force-app/
 │   ├── main/
 │   │   ├── default/
-│   │   │   ├── aura/                  # (if any supporting components)
-│   │   │   ├── classes/               # Apex Service & Controller classes
+│   │   │   ├── classes/               # Apex Controller class
 │   │   │   ├── customMetadata/        # Custom Metadata Types + Records
 │   │   │   ├── experiences/           # Experience Site configuration
 │   │   │   ├── lwc/                   # All Lightning Web Components
-│   │   │   ├── triggers/              # Supporting triggers (if any)
-│   │   │   └── profiles/
+│   │   │   ├── triggers/              # Supporting triggers 
+│   │   │   ├── permissionset/         # Custom permissionsets
+│   │   │   └── objects/               # custom objects and standard objects
+│   │   │   
 │   └── ...
-├── screenshots/                       # ← Add your screenshots here
+├── screenshots/                      
 └── README.md
+
+
 📸 Screenshots
-(Add your screenshots in the screenshots/ folder and update the paths below)
+
 1. Home / Portfolio Landing Page
-<img src="screenshots/home-page.png" alt="Home Page">
-2. Projects Section with Filters
-<img src="screenshots/projects-filter.png" alt="Projects with Filters">
-3. Dynamic LWC Component
-<img src="screenshots/dynamic-lwc.png" alt="Dynamic LWC">
-4. Experience Cloud (LWR) Site View
-<img src="screenshots/experience-cloud-view.png" alt="Experience Cloud Site">
-5. Mobile Responsive View
-<img src="screenshots/mobile-view.png" alt="Mobile Responsive">
+<img src="screenshots/home.png" alt="Home Page">
+3. Quick Actions
+<img src="screenshots/quick_actions.png" alt="Quick Actions">
+3. Projects Section with Filters
+<img src="screenshots/projects.png" alt="Projects with Filters">
+4. Skills section
+<img src="screenshots/skills.png" alt="Skills">
+5. Certificates
+<img src="screenshots/certificates.png" alt="Certificates">
+6. Resume
+<img src="screenshots/resume.png" alt="Resume">
+7. Contact
+<img src="screenshots/contact.png" alt="Contact">
+8. Footer
+<img src="screenshots/footer.png" alt="Footer">
+
 🏗️ Architecture Highlights
 
 Custom Metadata Driven – No hardcoded values in components
@@ -103,5 +111,5 @@ Create necessary Custom Metadata Types and load sample records
 Activate and configure the Experience Site
 
 
-Built with ❤️ by Venkat Malladi
-Salesforce Developer | Capgemini
+Built with ❤️ by Venkatesh M
+Salesforce Developer | Hyderabad
