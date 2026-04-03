@@ -90,430 +90,212 @@ metadata-driven-lwc-portfolio/
 
 <img src="screenshots/footer.png" alt="Mobile view">
 
+<div align="center">
 
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>README Section – Venkatesh M</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@300..700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
-  --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
-  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-  --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
-  --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
-  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem;
-  --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem;
-  --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem;
-  --radius-sm: 0.375rem; --radius-md: 0.5rem; --radius-lg: 0.75rem;
-  --radius-xl: 1rem; --radius-full: 9999px;
-  --transition: 180ms cubic-bezier(0.16, 1, 0.3, 1);
-  --font-body: 'Inter', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
-}
-[data-theme="dark"] {
-  --color-bg: #0d1117;
-  --color-surface: #161b22;
-  --color-surface-2: #21262d;
-  --color-surface-3: #30363d;
-  --color-border: rgba(255,255,255,0.08);
-  --color-text: #e6edf3;
-  --color-text-muted: #8b949e;
-  --color-text-faint: #484f58;
-  --color-primary: #58a6ff;
-  --color-primary-bg: rgba(88,166,255,0.08);
-  --color-green: #3fb950;
-  --color-green-bg: rgba(63,185,80,0.08);
-  --color-orange: #f0883e;
-  --color-orange-bg: rgba(240,136,62,0.08);
-  --color-purple: #bc8cff;
-  --color-purple-bg: rgba(188,140,255,0.08);
-  --color-yellow: #d29922;
-  --color-yellow-bg: rgba(210,153,34,0.08);
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
-  --shadow-md: 0 4px 16px rgba(0,0,0,0.5);
-}
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: var(--font-body);
-  font-size: var(--text-base);
-  color: var(--color-text);
-  background: var(--color-bg);
-  line-height: 1.7;
-  padding: var(--space-8) var(--space-4);
-}
-.container { max-width: 860px; margin: 0 auto; }
-.section-title {
-  display: flex; align-items: center; gap: var(--space-3);
-  font-size: var(--text-lg); font-weight: 700;
-  color: var(--color-text);
-  padding-bottom: var(--space-3);
-  border-bottom: 1px solid var(--color-border);
-  margin-bottom: var(--space-6);
-}
-.section-title .icon { font-size: 1.2em; }
-/* ── Architecture table ── */
-.arch-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-3);
-  margin-bottom: var(--space-10);
-}
-@media (max-width: 640px) { .arch-grid { grid-template-columns: 1fr; } }
-.arch-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-5);
-  transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
-}
-.arch-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
-  border-color: rgba(88,166,255,0.25);
-}
-.arch-card-header {
-  display: flex; align-items: center; gap: var(--space-2);
-  margin-bottom: var(--space-3);
-}
-.arch-card-icon {
-  width: 32px; height: 32px;
-  border-radius: var(--radius-md);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1rem; flex-shrink: 0;
-}
-.arch-card-title { font-size: var(--text-sm); font-weight: 700; color: var(--color-text); }
-.arch-card-subtitle { font-size: var(--text-xs); color: var(--color-text-muted); margin-top: 1px; }
-.arch-badge-list { display: flex; flex-direction: column; gap: var(--space-2); }
-.arch-badge {
-  display: flex; align-items: center; gap: var(--space-2);
-  font-size: var(--text-xs); color: var(--color-text-muted);
-}
-.arch-badge::before {
-  content: ''; width: 6px; height: 6px;
-  border-radius: 50%; flex-shrink: 0;
-}
-.card-blue  .arch-card-icon { background: var(--color-primary-bg); color: var(--color-primary); }
-.card-blue  .arch-badge::before { background: var(--color-primary); }
-.card-green .arch-card-icon { background: var(--color-green-bg); color: var(--color-green); }
-.card-green .arch-badge::before { background: var(--color-green); }
-.card-orange .arch-card-icon { background: var(--color-orange-bg); color: var(--color-orange); }
-.card-orange .arch-badge::before { background: var(--color-orange); }
-.card-purple .arch-card-icon { background: var(--color-purple-bg); color: var(--color-purple); }
-.card-purple .arch-badge::before { background: var(--color-purple); }
-.skills-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: var(--space-3); margin-bottom: var(--space-10);
-}
-.skill-item {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-4);
-  display: flex; align-items: flex-start; gap: var(--space-3);
-}
-.skill-dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 6px; flex-shrink: 0; }
-.skill-body { }
-.skill-name { font-size: var(--text-sm); font-weight: 600; color: var(--color-text); }
-.skill-desc { font-size: var(--text-xs); color: var(--color-text-muted); margin-top: 2px; }
-.cert-row {
-  display: flex; gap: var(--space-2); flex-wrap: wrap;
-  margin-top: var(--space-4); margin-bottom: var(--space-10);
-}
-.cert-badge {
-  font-size: var(--text-xs); font-weight: 600;
-  padding: var(--space-1) var(--space-3);
-  border-radius: var(--radius-full);
-  border: 1px solid var(--color-border);
-  background: var(--color-surface-2);
-  color: var(--color-text-muted);
-}
-.roadmap-list {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: var(--space-3); margin-bottom: var(--space-10);
-}
-.roadmap-item {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-4) var(--space-5);
-  display: flex; align-items: center; gap: var(--space-3);
-}
-.roadmap-icon { font-size: 1.3rem; }
-.roadmap-text { }
-.roadmap-label { font-size: var(--text-sm); font-weight: 600; color: var(--color-text); }
-.roadmap-status {
-  font-size: var(--text-xs); font-weight: 600; font-family: var(--font-mono);
-  margin-top: 2px; color: var(--color-yellow);
-}
-.deploy-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  margin-bottom: var(--space-10);
-}
-.deploy-header {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: var(--space-4) var(--space-6);
-  background: var(--color-surface-2);
-  border-bottom: 1px solid var(--color-border);
-}
-.deploy-title {
-  display: flex; align-items: center; gap: var(--space-2);
-  font-size: var(--text-sm); font-weight: 600; color: var(--color-text);
-}
-.deploy-tag {
-  font-size: var(--text-xs); font-weight: 600; font-family: var(--font-mono);
-  background: var(--color-green-bg); color: var(--color-green);
-  padding: 2px var(--space-2); border-radius: var(--radius-sm);
-}
-.code-block {
-  font-family: var(--font-mono); font-size: var(--text-xs);
-  line-height: 1.9; padding: var(--space-6);
-  overflow-x: auto; color: #e6edf3;
-}
-.code-line { display: flex; gap: var(--space-3); align-items: baseline; }
-.code-line-num { color: var(--color-text-faint); user-select: none; min-width: 1.5ch; text-align: right; }
-.code-cmd { color: #79c0ff; }
-.code-arg { color: #a5d6ff; }
-.code-comment { color: #6e7681; font-style: italic; }
-.code-step { color: #3fb950; font-weight: 600; }
-.deploy-footer {
-  padding: var(--space-3) var(--space-6);
-  border-top: 1px solid var(--color-border);
-  font-size: var(--text-xs); color: var(--color-text-muted);
-  display: flex; align-items: center; gap: var(--space-2);
-}
-.readme-footer {
-  border-top: 1px solid var(--color-border);
-  padding-top: var(--space-6);
-  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-4);
-}
-.footer-author { font-size: var(--text-sm); color: var(--color-text-muted); }
-.footer-author strong { color: var(--color-text); }
-.footer-links { display: flex; gap: var(--space-4); }
-.footer-links a {
-  font-size: var(--text-xs); font-weight: 600;
-  color: var(--color-primary); text-decoration: none;
-  transition: opacity var(--transition);
-}
-.footer-links a:hover { opacity: 0.75; }
-.section { margin-bottom: var(--space-10); }
+<div style="background: linear-gradient(135deg, #0d1117 0%, #161b22 100%); border: 1px solid #30363d; border-radius: 12px; padding: 24px; max-width: 900px; margin: 20px auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #e6edf3;">
 
-</style>
-</head>
-<body>
-<div class="container">
-
-  <!-- ── Architecture Highlights ── -->
-  <div class="section">
-    <div class="section-title">
-      <span class="icon">🏗️</span> Architecture Highlights
+<!-- 🏗️ Architecture Highlights -->
+<div style="margin-bottom: 32px;">
+  <h3 style="display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 700; color: #58a6ff; margin: 0 0 20px 0; border-bottom: 1px solid #30363d; padding-bottom: 12px;">🏗️ Architecture Highlights</h3>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+    
+    <div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; transition: all 0.2s ease;">
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+        <div style="width: 36px; height: 36px; background: rgba(88,166,255,0.1); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 16px;">⚙️</div>
+        <div>
+          <div style="font-size: 14px; font-weight: 600; color: #e6edf3;">Custom Metadata Driven</div>
+          <div style="font-size: 12px; color: #8b949e;">Zero-hardcode LWC</div>
+        </div>
+      </div>
+      <div style="font-size: 12px; color: #8b949e; line-height: 1.6;">
+        • No-deployment content updates<br>
+        • Business-managed via Admin UI
+      </div>
     </div>
-    <div class="arch-grid">
-      <div class="arch-card card-blue">
-        <div class="arch-card-header">
-          <div class="arch-card-icon">⚙️</div>
-          <div>
-            <div class="arch-card-title">Custom Metadata Driven</div>
-            <div class="arch-card-subtitle">Zero-hardcode architecture</div>
-          </div>
-        </div>
-        <div class="arch-badge-list">
-          <div class="arch-badge">No-deployment content updates</div>
-          <div class="arch-badge">Business-managed via Admin UI</div>
+
+    <div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; transition: all 0.2s ease;">
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+        <div style="width: 36px; height: 36px; background: rgba(63,185,80,0.1); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 16px;">🧱</div>
+        <div>
+          <div style="font-size: 14px; font-weight: 600; color: #e6edf3;">Service Layer Pattern</div>
+          <div style="font-size: 12px; color: #8b949e;">Clean separation</div>
         </div>
       </div>
-      <div class="arch-card card-green">
-        <div class="arch-card-header">
-          <div class="arch-card-icon">🧱</div>
-          <div>
-            <div class="arch-card-title">Service Layer Pattern</div>
-            <div class="arch-card-subtitle">Clean UI / business separation</div>
-          </div>
-        </div>
-        <div class="arch-badge-list">
-          <div class="arch-badge">Fully testable Apex controllers</div>
-          <div class="arch-badge">Enterprise-grade maintainability</div>
+      <div style="font-size: 12px; color: #8b949e; line-height: 1.6;">
+        • Fully testable Apex controllers<br>
+        • Enterprise maintainability
+      </div>
+    </div>
+
+    <div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; transition: all 0.2s ease;">
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+        <div style="width: 36px; height: 36px; background: rgba(240,136,62,0.1); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 16px;">⚡</div>
+        <div>
+          <div style="font-size: 14px; font-weight: 600; color: #e6edf3;">Bulkified Apex</div>
+          <div style="font-size: 12px; color: #8b949e;">Governor-safe</div>
         </div>
       </div>
-      <div class="arch-card card-orange">
-        <div class="arch-card-header">
-          <div class="arch-card-icon">⚡</div>
-          <div>
-            <div class="arch-card-title">Bulkified & Optimized Apex</div>
-            <div class="arch-card-subtitle">Governor limit safe</div>
-          </div>
-        </div>
-        <div class="arch-badge-list">
-          <div class="arch-badge">Handles 100k+ records safely</div>
-          <div class="arch-badge">Optimized SOQL & DML patterns</div>
+      <div style="font-size: 12px; color: #8b949e; line-height: 1.6;">
+        • 100k+ records safe<br>
+        • Optimized SOQL patterns
+      </div>
+    </div>
+
+    <div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; transition: all 0.2s ease;">
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+        <div style="width: 36px; height: 36px; background: rgba(188,140,255,0.1); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 16px;">🔒</div>
+        <div>
+          <div style="font-size: 14px; font-weight: 600; color: #e6edf3;">Guest User Secure</div>
+          <div style="font-size: 12px; color: #8b949e;">LWR public ready</div>
         </div>
       </div>
-      <div class="arch-card card-purple">
-        <div class="arch-card-header">
-          <div class="arch-card-icon">🔒</div>
-          <div>
-            <div class="arch-card-title">Guest User Optimized</div>
-            <div class="arch-card-subtitle">Public Experience Site ready</div>
-          </div>
-        </div>
-        <div class="arch-badge-list">
-          <div class="arch-badge">Secure data exposure in LWR</div>
-          <div class="arch-badge">Zero-vulnerability public access</div>
-        </div>
+      <div style="font-size: 12px; color: #8b949e; line-height: 1.6;">
+        • Secure data exposure<br>
+        • Zero vulnerabilities
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 🎯 Skills -->
+<div style="margin-bottom: 32px;">
+  <h3 style="display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 700; color: #58a6ff; margin: 0 0 20px 0; border-bottom: 1px solid #30363d; padding-bottom: 12px;">🎯 Architect Skills Demonstrated</h3>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-bottom: 20px;">
+    <div style="display: flex; align-items: flex-start; gap: 12px; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px;">
+      <div style="width: 8px; height: 8px; border-radius: 50%; background: #58a6ff; margin-top: 6px; flex-shrink: 0;"></div>
+      <div>
+        <div style="font-size: 14px; font-weight: 600; color: #e6edf3; margin-bottom: 4px;">Metadata-Driven Development</div>
+        <div style="font-size: 12px; color: #8b949e;">Production-grade dynamic content</div>
+      </div>
+    </div>
+    
+    <div style="display: flex; align-items: flex-start; gap: 12px; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px;">
+      <div style="width: 8px; height: 8px; border-radius: 50%; background: #3fb950; margin-top: 6px; flex-shrink: 0;"></div>
+      <div>
+        <div style="font-size: 14px; font-weight: 600; color: #e6edf3; margin-bottom: 4px;">LWR + Experience Cloud</div>
+        <div style="font-size: 12px; color: #8b949e;">End-to-end site architecture</div>
+      </div>
+    </div>
+    
+    <div style="display: flex; align-items: flex-start; gap: 12px; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px;">
+      <div style="width: 8px; height: 8px; border-radius: 50%; background: #f0883e; margin-top: 6px; flex-shrink: 0;"></div>
+      <div>
+        <div style="font-size: 14px; font-weight: 600; color: #e6edf3; margin-bottom: 4px;">Enterprise Solution Design</div>
+        <div style="font-size: 12px; color: #8b949e;">Security + performance focus</div>
+      </div>
+    </div>
+    
+    <div style="display: flex; align-items: flex-start; gap: 12px; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px;">
+      <div style="width: 8px; height: 8px; border-radius: 50%; background: #bc8cff; margin-top: 6px; flex-shrink: 0;"></div>
+      <div>
+        <div style="font-size: 14px; font-weight: 600; color: #e6edf3; margin-bottom: 4px;">Salesforce Best Practices</div>
+        <div style="font-size: 12px; color: #8b949e;">Bulkification + service layers</div>
       </div>
     </div>
   </div>
-
-  <!-- ── Skills Demonstrated ── -->
-  <div class="section">
-    <div class="section-title">
-      <span class="icon">🎯</span> Architect Skills Demonstrated
-    </div>
-    <div class="skills-grid">
-      <div class="skill-item">
-        <div class="skill-dot" style="background:#58a6ff"></div>
-        <div class="skill-body">
-          <div class="skill-name">Metadata-Driven Development</div>
-          <div class="skill-desc">Production-grade dynamic content systems</div>
-        </div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-dot" style="background:#3fb950"></div>
-        <div class="skill-body">
-          <div class="skill-name">LWR + Experience Cloud</div>
-          <div class="skill-desc">End-to-end site architecture mastery</div>
-        </div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-dot" style="background:#f0883e"></div>
-        <div class="skill-body">
-          <div class="skill-name">Enterprise Solution Design</div>
-          <div class="skill-desc">Security, performance & maintainability focus</div>
-        </div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-dot" style="background:#bc8cff"></div>
-        <div class="skill-body">
-          <div class="skill-name">Salesforce Best Practices</div>
-          <div class="skill-desc">Bulkification, service layers, guest security</div>
-        </div>
-      </div>
-    </div>
-    <div class="cert-row">
-      <span class="cert-badge">🏅 Platform Developer I/II</span>
-      <span class="cert-badge">🏅 Experience Cloud Consultant</span>
-      <span class="cert-badge">🏅 Agentforce Specialist</span>
-      <span class="cert-badge">🏅 Data Cloud Consultant</span>
-    </div>
+  
+  <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+    <span style="font-size: 11px; font-weight: 600; padding: 4px 12px; background: #21262d; border: 1px solid #30363d; border-radius: 20px; color: #8b949e;">🏅 Platform Developer I/II</span>
+    <span style="font-size: 11px; font-weight: 600; padding: 4px 12px; background: #21262d; border: 1px solid #30363d; border-radius: 20px; color: #8b949e;">🏅 Experience Cloud Consultant</span>
+    <span style="font-size: 11px; font-weight: 600; padding: 4px 12px; background: #21262d; border: 1px solid #30363d; border-radius: 20px; color: #8b949e;">🏅 Agentforce Specialist</span>
   </div>
+</div>
 
-  <!-- ── Roadmap ── -->
-  <div class="section">
-    <div class="section-title">
-      <span class="icon">🔮</span> Planned Enhancements
+<!-- 🔮 Roadmap -->
+<div style="margin-bottom: 32px;">
+  <h3 style="display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 700; color: #58a6ff; margin: 0 0 20px 0; border-bottom: 1px solid #30363d; padding-bottom: 12px;">🔮 Planned Enhancements</h3>
+  
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #161b22; border: 1px solid #30363d; border-radius: 8px;">
+      <div style="font-size: 24px;">🎨</div>
+      <div>
+        <div style="font-size: 14px; font-weight: 600; color: #e6edf3;">Dark/Light Mode</div>
+        <div style="font-size: 11px; font-weight: 600; color: #d29922; font-family: 'SF Mono', monospace;">◉ Planned</div>
+      </div>
     </div>
-    <div class="roadmap-list">
-      <div class="roadmap-item">
-        <div class="roadmap-icon">🎨</div>
-        <div class="roadmap-text">
-          <div class="roadmap-label">Dark / Light Mode Toggle</div>
-          <div class="roadmap-status">◉ Planned</div>
-        </div>
+    
+    <div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #161b22; border: 1px solid #30363d; border-radius: 8px;">
+      <div style="font-size: 24px;">📝</div>
+      <div>
+        <div style="font-size: 14px; font-weight: 600; color: #e6edf3;">CMS Blog Section</div>
+        <div style="font-size: 11px; font-weight: 600; color: #d29922; font-family: 'SF Mono', monospace;">◉ Planned</div>
       </div>
-      <div class="roadmap-item">
-        <div class="roadmap-icon">📝</div>
-        <div class="roadmap-text">
-          <div class="roadmap-label">CMS Blog Section</div>
-          <div class="roadmap-status">◉ Planned</div>
-        </div>
+    </div>
+    
+    <div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #161b22; border: 1px solid #30363d; border-radius: 8px;">
+      <div style="font-size: 24px;">📊</div>
+      <div>
+        <div style="font-size: 14px; font-weight: 600; color: #e6edf3;">Real-time Analytics</div>
+        <div style="font-size: 11px; font-weight: 600; color: #d29922; font-family: 'SF Mono', monospace;">◉ Planned</div>
       </div>
-      <div class="roadmap-item">
-        <div class="roadmap-icon">📊</div>
-        <div class="roadmap-text">
-          <div class="roadmap-label">Real-time Analytics</div>
-          <div class="roadmap-status">◉ Planned</div>
-        </div>
-      </div>
-      <div class="roadmap-item">
-        <div class="roadmap-icon">🌍</div>
-        <div class="roadmap-text">
-          <div class="roadmap-label">Multi-language Support</div>
-          <div class="roadmap-status">◉ Planned</div>
-        </div>
+    </div>
+    
+    <div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #161b22; border: 1px solid #30363d; border-radius: 8px;">
+      <div style="font-size: 24px;">🌍</div>
+      <div>
+        <div style="font-size: 14px; font-weight: 600; color: #e6edf3;">Multi-language</div>
+        <div style="font-size: 11px; font-weight: 600; color: #d29922; font-family: 'SF Mono', monospace;">◉ Planned</div>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- ── Deploy ── -->
-  <div class="section">
-    <div class="section-title">
-      <span class="icon">🚀</span> Deploy in 60 Seconds
+<!-- 🚀 Deploy -->
+<div style="margin-bottom: 32px;">
+  <h3 style="display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 700; color: #58a6ff; margin: 0 0 20px 0; border-bottom: 1px solid #30363d; padding-bottom: 12px;">🚀 Deploy in 60 Seconds</h3>
+  
+  <div style="background: #161b22; border: 1px solid #30363d; border-radius: 12px; overflow: hidden;">
+    <div style="background: #0d1117; padding: 16px 24px; border-bottom: 1px solid #30363d; display: flex; align-items: center; justify-content: space-between;">
+      <div style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: #e6edf3;">
+        <span style="width: 12px; height: 12px; background: #3fb950; border-radius: 2px;"></span>
+        Terminal
+      </div>
+      <span style="font-size: 11px; font-weight: 600; background: rgba(63,185,80,0.1); color: #3fb950; padding: 4px 8px; border-radius: 4px;">bash</span>
     </div>
-    <div class="deploy-card">
-      <div class="deploy-header">
-        <div class="deploy-title">
-          <span>⬛</span> Terminal
-        </div>
-        <span class="deploy-tag">bash</span>
+    
+    <div style="padding: 24px; font-family: 'SF Mono', monospace; font-size: 13px; line-height: 1.7; color: #e6edf3; background: #0d1117;">
+      <div style="color: #8b949e; font-size: 12px; margin-bottom: 12px;"># Clone & Authenticate</div>
+      <div style="display: flex; gap: 16px; align-items: flex-start; margin-bottom: 8px;">
+        <span style="color: #8b949e; min-width: 24px;">$</span>
+        <span style="color: #79c0ff;">git</span> <span style="color: #a5d6ff;">clone &lt;repo&gt; && cd portfolio</span>
       </div>
-      <div class="code-block">
-        <div class="code-line">
-          <span class="code-line-num">1</span>
-          <span><span class="code-comment"># Clone & Authenticate</span></span>
-        </div>
-        <div class="code-line">
-          <span class="code-line-num">2</span>
-          <span><span class="code-cmd">git</span> <span class="code-arg">clone &lt;repo-url&gt; &amp;&amp; cd portfolio</span></span>
-        </div>
-        <div class="code-line">
-          <span class="code-line-num">3</span>
-          <span><span class="code-cmd">sf</span> <span class="code-arg">org login web --alias portfolio-org</span></span>
-        </div>
-        <div class="code-line"><span class="code-line-num">&nbsp;</span></div>
-        <div class="code-line">
-          <span class="code-line-num">4</span>
-          <span><span class="code-comment"># Deploy & Load Data</span></span>
-        </div>
-        <div class="code-line">
-          <span class="code-line-num">5</span>
-          <span><span class="code-cmd">sf</span> <span class="code-arg">project deploy start</span></span>
-        </div>
-        <div class="code-line">
-          <span class="code-line-num">6</span>
-          <span><span class="code-cmd">sf</span> <span class="code-arg">data tree import --plan ./data/sample.json</span></span>
-        </div>
-        <div class="code-line"><span class="code-line-num">&nbsp;</span></div>
-        <div class="code-line">
-          <span class="code-line-num">7</span>
-          <span><span class="code-comment"># Activate Experience Site → Done! 🎉</span></span>
-        </div>
+      <div style="display: flex; gap: 16px; align-items: flex-start; margin-bottom: 16px;">
+        <span style="color: #8b949e; min-width: 24px;">$</span>
+        <span style="color: #79c0ff;">sf</span> <span style="color: #a5d6ff;">org login web --alias portfolio</span>
       </div>
-      <div class="deploy-footer">
-        📦 Prerequisites: Salesforce Org with Experience Cloud license &nbsp;·&nbsp; VS Code + Salesforce Extension Pack
+      
+      <div style="color: #8b949e; font-size: 12px; margin-bottom: 12px;"># Deploy & Load Data</div>
+      <div style="display: flex; gap: 16px; align-items: flex-start; margin-bottom: 8px;">
+        <span style="color: #8b949e; min-width: 24px;">$</span>
+        <span style="color: #79c0ff;">sf</span> <span style="color: #a5d6ff;">project deploy start</span>
       </div>
+      <div style="display: flex; gap: 16px; align-items: flex-start;">
+        <span style="color: #8b949e; min-width: 24px;">$</span>
+        <span style="color: #79c0ff;">sf</span> <span style="color: #a5d6ff;">data tree import --plan ./data/sample.json</span>
+      </div>
+    </div>
+    
+    <div style="padding: 12px 24px; background: #0d1117; border-top: 1px solid #30363d; font-size: 12px; color: #8b949e;">
+      📦 <strong>Prerequisites:</strong> Salesforce Org + Experience Cloud license • VS Code + Salesforce Extension Pack
     </div>
   </div>
+</div>
 
-  <!-- ── Footer ── -->
-  <div class="readme-footer">
-    <div class="footer-author">
-      Architected with ❤️ by <strong>Venkatesh M</strong> &nbsp;·&nbsp; Salesforce Developer/Architect &nbsp;·&nbsp; Capgemini India
-    </div>
-    <div class="footer-links">
-      <a href="#" target="_blank">LinkedIn</a>
-      <a href="#" target="_blank">Trailhead</a>
-      <a href="#" target="_blank">GitHub</a>
-    </div>
+<!-- Footer -->
+<div style="padding-top: 24px; border-top: 1px solid #30363d; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+  <div style="font-size: 14px; color: #8b949e;">
+    Architected with ❤️ by <strong style="color: #e6edf3;">Venkatesh M</strong><br>
+    <span style="font-size: 12px;">Salesforce Developer/Architect • Capgemini India</span>
   </div>
+  <div style="display: flex; gap: 16px;">
+    <a href="#" style="font-size: 12px; font-weight: 600; color: #58a6ff; text-decoration: none;">LinkedIn</a>
+    <a href="#" style="font-size: 12px; font-weight: 600; color: #58a6ff; text-decoration: none;">Trailhead</a>
+    <a href="#" style="font-size: 12px; font-weight: 600; color: #58a6ff; text-decoration: none;">GitHub</a>
+  </div>
+</div>
 
 </div>
-</body>
-</html>
+</div>
