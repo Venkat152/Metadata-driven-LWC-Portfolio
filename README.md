@@ -19,6 +19,10 @@ This project showcases a production-grade, maintainable architecture where all c
 
 > **Live Portfolio**: https://ddm00000fpkymuan-dev-ed.develop.my.site.com/venkateshPortfolio/s
 
+## ▶️ Watch Demo
+
+> **Youtube**: https://ddm00000fpkymuan-dev-ed.develop.my.site.com/venkateshPortfolio/s
+
 ## 🛠️ Tech Stack
 
 - **Frontend**: Lightning Web Components (LWC), LWR
@@ -86,9 +90,13 @@ metadata-driven-lwc-portfolio/
 8. Footer
 <img src="screenshots/footer.png" alt="Footer">
 
-## 📸 Mobile View
+## 📱✨ Mobile View
+1. Home , Footer , Projects
+<img src="screenshots/mobile1.png" alt="Mobile view">
 
-<img src="screenshots/mobile.png" alt="Mobile view">
+2. Skills, Certificates, Resume , Contact
+<img src="screenshots/mobile2.png" alt="Mobile view">
+
 
 <h2>🏗️ Architecture Highlights</h2>
 
@@ -180,5 +188,5 @@ sf project deploy start
 
 <p>
   <strong>Venkatesh M</strong><br>
-  Salesforce Developer | India
+  Salesforce Developer | Capgemini | India
 </p>
