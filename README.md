@@ -166,7 +166,7 @@ metadata-driven-lwc-portfolio/
   <li>Authenticate to your Salesforce org</li>
   <li>Deploy the source using Salesforce CLI</li>
   <li>Create required Custom Metadata Types</li>
-  <li>Load sample metadata records</li>
+  <li>Create own metadata records</li>
   <li>Activate and configure the Experience Site</li>
 </ol>
 
