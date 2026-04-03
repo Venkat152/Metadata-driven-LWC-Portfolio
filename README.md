@@ -90,7 +90,7 @@ metadata-driven-lwc-portfolio/
 8. Footer
 <img src="screenshots/footer.png" alt="Footer">
 
-## 📸 Mobile View
+## 📱✨ Mobile View
 
 <img src="screenshots/mobile.png" alt="Mobile view">
 
