@@ -113,10 +113,9 @@ metadata-driven-lwc-portfolio/
   </tr>
   <tr>
     <td valign="top" width="50%">
-      <h3>⚡ Bulkified &amp; Optimized Apex</h3>
+      <h3>⚡ Optimized Apex</h3>
       <ul>
         <li>Governor-limit safe design</li>
-        <li>100k+ record handling support</li>
         <li>Optimized SOQL and DML patterns</li>
       </ul>
     </td>
@@ -144,29 +143,21 @@ metadata-driven-lwc-portfolio/
     <td valign="top" width="50%">
       <ul>
         <li><strong>Enterprise Solution Design</strong><br>Security, scalability, and maintainability focus</li>
-        <li><strong>Salesforce Best Practices</strong><br>Bulkification, service layers, and guest security</li>
+        <li><strong>Salesforce Best Practices</strong><br>Service layers, and guest security</li>
       </ul>
     </td>
   </tr>
 </table>
 
-<p>
-  <strong>Relevant Certifications:</strong><br>
-  Platform Developer I • Platform Developer II • Experience Cloud Consultant • Data Cloud Consultant • Agentforce Specialist
-</p>
-
 <h2>🔮 Planned Enhancements</h2>
 
-<table>
-  <tr>
-    <td>🎨 Dark/Light Mode Toggle</td>
-    <td>📝 CMS-Driven Blog / Articles</td>
-  </tr>
-  <tr>
-    <td>📊 Real-Time Analytics Dashboard</td>
-    <td>🌍 Multi-Language Support</td>
-  </tr>
-</table>
+<ol>
+  <li>🎨 Dark/Light Mode Toggle</li>
+  <li>📝 CMS-Driven Blog / Articles</li>
+  <li>📊 Real-Time Analytics Dashboard</li>
+  <li>🌍 Multi-Language Support</li>
+</ol>
+
 
 <h2>🚀 Deployment Steps</h2>
 
@@ -179,11 +170,10 @@ metadata-driven-lwc-portfolio/
   <li>Activate and configure the Experience Site</li>
 </ol>
 
-<pre><code>git clone &lt;repo-url&gt;
+<pre><code>git clone https://github.com/Venkat152/Metadata-driven-LWC-Portfolio.git;
 cd &lt;project-folder&gt;
 sf org login web --alias portfolio
 sf project deploy start
-sf data tree import --plan ./data/sample.json
 </code></pre>
 
 <h2>👨‍💻 Author</h2>
