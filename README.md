@@ -2,7 +2,8 @@
 
 A modern, **zero-hardcode**, fully dynamic portfolio website built on **Salesforce Experience Cloud (LWR)** using Lightning Web Components.
 
-![Metadata-Driven LWC Portfolio on Experience Cloud](https://capsule-render.vercel.app/api?type=soft&color=0A66C2&height=280&section=header&text=Metadata-Driven%20LWC%20Portfolio&desc=Zero-Hardcode%20Architecture%20%7C%20Experience%20Cloud%20(LWR)&fontSize=38&fontAlignY=48&descAlignY=68&fontColor=ffffff)
+![Metadata-Driven LWC Portfolio](https://capsule-render.vercel.app/api?type=rect&color=0:111827,35:1e3a8a,70:0A66C2,100:38BDF8&height=250&section=header&text=Metadata-Driven%20LWC%20Portfolio&fontSize=35&fontColor=ffffff&fontAlignY=36&desc=Custom%20Metadata%20%7C%20Service%20Layer%20%7C%20Experience%20Cloud%20(LWR)&descSize=18&descAlignY=60&animation=twinkling)
+
 
 This project showcases a production-grade, maintainable architecture where all content (projects, skills, certifications, etc.) can be updated **without any code deployment** — purely through **Custom Metadata Types**.
 
