@@ -61,28 +61,21 @@ export default class ProjectsPage extends LightningElement {
     }
 
     loadProjects() {
-        // Load projects from Apex (Project__c). Some fields available on the object
-        // may differ from the previous static JSON; provide safe fallbacks so the
-        // template doesn't break if a field is missing.
         getAllProjects()
             .then(result => {
                 const mapped = (Array.isArray(result) ? result : []).map(p => {
                     const difficulty = p.Difficulty__c || 'Medium';
-                    // Build tech array from child relationship Project_Skills__r -> Skill__r.Name
                     const skills = (p.Project_Skills__r && Array.isArray(p.Project_Skills__r))
                         ? p.Project_Skills__r.map(ps => (ps && ps.Skill__r) ? ps.Skill__r.Name : null).filter(Boolean)
                         : [];
 
-                    // Keep the raw Created_Date__c for accurate sorting, and create a formatted month-year string for display
                     const rawDate = p.Created_Date__c || null;
                     const formattedDate = rawDate
                         ? new Date(rawDate).toLocaleString('en-US', { month: 'short', year: 'numeric' })
                         : '';
 
                     return {
-                        // Template expects these keys: name, date, tech (array), description, website, github, youtube, difficulty, difficultyClass
                         name: p.Name || '',
-                        // date (formatted for display) and dateRaw (ISO) kept for sorting
                         date: formattedDate,
                         dateRaw: rawDate,
                         tech: skills,
@@ -100,7 +93,6 @@ export default class ProjectsPage extends LightningElement {
                 this.sortProjects();
             })
             .catch(error => {
-                // eslint-disable-next-line no-console
                 console.error('Error fetching projects from Apex:', error);
             });
     }
@@ -114,10 +106,8 @@ clearFilters() {
     // Reset the data
     this.filteredProjects = [...this.projects];
     
-    // Explicitly re-sort and re-filter to ensure UI matches
     this.sortProjects();
     
-    // Logic to force the HTML select elements to update is handled by the value={selectedTech} in HTML
 }
 
     filterProjects() {
@@ -143,8 +133,7 @@ clearFilters() {
                     const diffOrder = { Low: 1, Medium: 2, High: 3 };
                     return (diffOrder[a.difficulty] || 0) - (diffOrder[b.difficulty] || 0);
                 }
-                default: { // date (safely handle missing/invalid dates)
-                    // Use the raw ISO Created_Date__c (dateRaw) for accurate comparisons
+                default: { 
                     const da = a.dateRaw ? new Date(a.dateRaw) : null;
                     const db = b.dateRaw ? new Date(b.dateRaw) : null;
                     const aValid = da instanceof Date && !isNaN(da);

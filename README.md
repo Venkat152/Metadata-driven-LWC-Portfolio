@@ -55,9 +55,22 @@ metadata-driven-lwc-portfolio/
 │   ├── main/
 │   │   ├── default/
 │   │   │   ├── classes/               # Apex Controller class
+│   │   │   │      ├── CustomMetadataUtil
+│   │   │   │      └── ProjectTriggerHandler
+│   │   │   │
 │   │   │   ├── customMetadata/        # Custom Metadata Types + Records
 │   │   │   ├── experiences/           # Experience Site configuration
 │   │   │   ├── lwc/                   # All Lightning Web Components
+│   │   │   │      ├── contactPage
+│   │   │   │      ├── portfolioCertifications
+│   │   │   │      ├── portfolioFooter
+│   │   │   │      ├── portfolioSkills
+│   │   │   │      ├── portfolioNav
+│   │   │   │      ├── projectsPage
+│   │   │   │      ├── quickNavLinks
+│   │   │   │      ├── resumePage
+│   │   │   │      └── ProjectTriggerHandler
+│   │   │   │
 │   │   │   ├── triggers/              # Supporting triggers 
 │   │   │   ├── permissionset/         # Custom permissionsets
 │   │   │   └── objects/               # custom objects and standard objects

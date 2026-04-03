@@ -11,11 +11,6 @@ export default class ResumePage extends LightningElement {
 
     resumeUrl = RESUME_FILE + '/resume.pdf';
 
-    // Getter to inject the background image into the template
-    get backgroundStyle() {
-        return `background-image: url(${this.bgImage}); background-size: cover; background-position: center;`;
-    }
-
     handleDownload() {
         window.open(this.resumeUrl, '_blank');
     }

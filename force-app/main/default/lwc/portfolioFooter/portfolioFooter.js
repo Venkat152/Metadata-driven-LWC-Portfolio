@@ -15,10 +15,8 @@ export default class PortfolioFooter extends NavigationMixin(LightningElement) {
     @wire(getMyAccountDetails)
         wiredAccountDetails({error,data}){
             if(data){
-                            // Helper to ensure the URL is absolute and clickable
                             const formatUrl = (url) => {
                                 if (!url) return '';
-                                // If it doesn't start with http, the browser thinks it's a local folder
                                 return url.startsWith('http') ? url : `https://${url}`;
                             };
             

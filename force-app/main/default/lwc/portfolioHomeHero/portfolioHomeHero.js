@@ -31,7 +31,6 @@ export default class PortfolioHomeHero extends NavigationMixin(LightningElement)
             this.projectsCount = data.Total_Projects__c;
             this.certificationsCount = data.Total_Certificates__c;
 
-            // Logic remains the same, but happens automatically on load
             const imagePath = (data.Image_Name__c || '').trim();
             const normalized = imagePath 
                 ? (imagePath.startsWith('/') ? imagePath : `/${imagePath}`) 
@@ -40,7 +39,6 @@ export default class PortfolioHomeHero extends NavigationMixin(LightningElement)
 
             this.skills = data.Skills__c ? data.Skills__c.split(';') : [];
             
-            // Fixed badges
             this.rangerBadge = Portfolio_Assets + '/four_star_ranger.png';
             this.agentblazerBadge = Portfolio_Assets + '/agentblazer.png';
 
@@ -49,7 +47,6 @@ export default class PortfolioHomeHero extends NavigationMixin(LightningElement)
         }
     }
 
-    // Will be computed in getAccountDetails() strictly from Account.Image_Name__c
     @track heroImage;
     navigateToProjects() {
         this[NavigationMixin.Navigate]({
