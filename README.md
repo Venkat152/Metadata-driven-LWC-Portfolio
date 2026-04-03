@@ -64,7 +64,7 @@ metadata-driven-lwc-portfolio/
 
 1. Home / Portfolio Landing Page
 <img src="screenshots/home.png" alt="Home Page">
-3. Quick Actions
+3. Quick Links
 <img src="screenshots/quick_actions.png" alt="Quick Actions">
 3. Projects Section with Filters
 <img src="screenshots/projects.png" alt="Projects with Filters">
