@@ -86,6 +86,7 @@ metadata-driven-lwc-portfolio/
 8. Footer
 <img src="screenshots/footer.png" alt="Footer">
 
+```bash
 🏗️ Architecture Highlights
 text
 ┌─────────────────────────────────────────────────────────────┐
