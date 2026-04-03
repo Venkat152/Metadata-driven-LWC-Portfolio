@@ -216,7 +216,6 @@ metadata-driven-lwc-portfolio/
         <div style="font-size: 11px; font-weight: 600; color: #d29922; font-family: 'SF Mono', monospace;">◉ Planned</div>
       </div>
     </div>
-    
     <div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #161b22; border: 1px solid #30363d; border-radius: 8px;">
       <div style="font-size: 24px;">📝</div>
       <div>
@@ -224,7 +223,6 @@ metadata-driven-lwc-portfolio/
         <div style="font-size: 11px; font-weight: 600; color: #d29922; font-family: 'SF Mono', monospace;">◉ Planned</div>
       </div>
     </div>
-    
     <div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #161b22; border: 1px solid #30363d; border-radius: 8px;">
       <div style="font-size: 24px;">📊</div>
       <div>
@@ -232,7 +230,6 @@ metadata-driven-lwc-portfolio/
         <div style="font-size: 11px; font-weight: 600; color: #d29922; font-family: 'SF Mono', monospace;">◉ Planned</div>
       </div>
     </div>
-    
     <div style="display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: #161b22; border: 1px solid #30363d; border-radius: 8px;">
       <div style="font-size: 24px;">🌍</div>
       <div>
@@ -255,7 +252,6 @@ metadata-driven-lwc-portfolio/
       </div>
       <span style="font-size: 11px; font-weight: 600; background: rgba(63,185,80,0.1); color: #3fb950; padding: 4px 8px; border-radius: 4px;">bash</span>
     </div>
-    
     <div style="padding: 24px; font-family: 'SF Mono', monospace; font-size: 13px; line-height: 1.7; color: #e6edf3; background: #0d1117;">
       <div style="color: #8b949e; font-size: 12px; margin-bottom: 12px;"># Clone & Authenticate</div>
       <div style="display: flex; gap: 16px; align-items: flex-start; margin-bottom: 8px;">
@@ -266,7 +262,6 @@ metadata-driven-lwc-portfolio/
         <span style="color: #8b949e; min-width: 24px;">$</span>
         <span style="color: #79c0ff;">sf</span> <span style="color: #a5d6ff;">org login web --alias portfolio</span>
       </div>
-      
       <div style="color: #8b949e; font-size: 12px; margin-bottom: 12px;"># Deploy & Load Data</div>
       <div style="display: flex; gap: 16px; align-items: flex-start; margin-bottom: 8px;">
         <span style="color: #8b949e; min-width: 24px;">$</span>
@@ -277,7 +272,6 @@ metadata-driven-lwc-portfolio/
         <span style="color: #79c0ff;">sf</span> <span style="color: #a5d6ff;">data tree import --plan ./data/sample.json</span>
       </div>
     </div>
-    
     <div style="padding: 12px 24px; background: #0d1117; border-top: 1px solid #30363d; font-size: 12px; color: #8b949e;">
       📦 <strong>Prerequisites:</strong> Salesforce Org + Experience Cloud license • VS Code + Salesforce Extension Pack
     </div>
