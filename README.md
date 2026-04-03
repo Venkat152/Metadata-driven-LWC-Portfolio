@@ -59,8 +59,8 @@ metadata-driven-lwc-portfolio/
 ├── screenshots/                      
 └── README.md
 
-
-📸 Screenshots
+```
+## 📸 Screenshots
 
 1. Home / Portfolio Landing Page
 <img src="screenshots/home.png" alt="Home Page">
