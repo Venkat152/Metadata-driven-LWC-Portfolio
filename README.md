@@ -19,6 +19,10 @@ This project showcases a production-grade, maintainable architecture where all c
 
 > **Live Portfolio**: https://ddm00000fpkymuan-dev-ed.develop.my.site.com/venkateshPortfolio/s
 
+## ▶️ Watch Demo
+
+> **Youtube**: https://ddm00000fpkymuan-dev-ed.develop.my.site.com/venkateshPortfolio/s
+
 ## 🛠️ Tech Stack
 
 - **Frontend**: Lightning Web Components (LWC), LWR
