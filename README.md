@@ -87,53 +87,53 @@ metadata-driven-lwc-portfolio/
 <img src="screenshots/footer.png" alt="Footer">
 
 🏗️ Architecture Highlights
-
-Feature	Implementation	Impact
-Custom Metadata Driven	Zero-hardcoded values in LWC	No-code content updates – Deploy-free maintenance
-Service Layer Pattern	Apex abstraction for UI logic	Clean, testable architecture – Enterprise scalability
-Bulkified Apex	Governor-limit optimized queries	High-performance – Handles 100k+ records safely
-Guest User Optimized	Secure data exposure in LWR	Public-ready performance – Zero vulnerabilities
-Reusable Components	Modular LWC design	Future-proof extensibility – Rapid feature additions
-🎯 Skills Demonstrated
-Metadata-Driven Development – Production-grade dynamic content
-
-LWR + Experience Cloud Mastery – End-to-end site architecture
-
-Enterprise Solution Design – Security, performance, maintainability focus
-
-Salesforce Best Practices – Bulkification, service layers, guest security
-
-Relevant Certifications: Platform Developer I/II, Experience Cloud Consultant
-
-🔮 Planned Enhancements
 text
-graph TD
-    A[Dark/Light Mode] --> B[Blog CMS Section]
-    B --> C[Real-time Analytics Dashboard]
-    C --> D[Multi-language Support]
-✨ UI/UX: Theme toggle + accessibility improvements
+┌─────────────────────────────────────────────────────────────┐
+│                    ENTERPRISE FEATURES                      │
+├─────────────────────┬───────────────────────────────────────┤
+│ Custom Metadata     │ ✅ Zero-hardcode LWC                 │
+│                     │ 🔄 No-deployment content updates     │
+├─────────────────────┼───────────────────────────────────────┤
+│ Service Layer       │ 🧠 Clean UI/Business separation      │
+│                     │ ✅ Fully testable                    │
+├─────────────────────┼───────────────────────────────────────┤
+│ Bulkified Apex      │ ⚡ Governor-safe (100k+ records)     │
+│                     │ 📈 Optimized SOQL                   │
+├─────────────────────┼───────────────────────────────────────┤
+│ Guest User Secure   │ 🔒 Public LWR ready                 │
+│                     │ 🚀 Zero vulnerabilities              │
+└─────────────────────┴───────────────────────────────────────┘
+🎯 Architect Skills Demonstrated
+text
+graph TB
+    A[Metadata-Driven Dev] --> B[LWR Site Mastery]
+    B --> C[Enterprise Patterns]
+    C --> D[Security + Performance]
+    
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style C fill:#e8f5e8
+    style D fill:#fff3e0
+Core Expertise:
 
-📝 Content: CMS-powered blog/articles
+Production-grade dynamic content systems
 
-📊 Analytics: Live project metrics dashboard
+End-to-end Experience Cloud architecture
 
-🌍 Global: i18n + RTL language support
+Bulkification + service layer patterns
 
-🚀 One-Click Deployment
+Guest-access security optimization
+
+🔮 Roadmap
+Phase	Feature	Status
+🎨	Dark/Light Mode Toggle	Planned
+📝	CMS Blog Section	Planned
+📊	Real-time Analytics	Planned
+🌍	Multi-language Support	Planned
+🚀 Deploy in 60 Seconds
 bash
-# 1. Clone & Authenticate
-git clone <your-repo>
-sf org login web
-
-# 2. Deploy Everything
+git clone <repo> && cd project
+sf org login web --alias portfolio
 sf project deploy start
-
-# 3. Load Sample Data
-sf data tree import --plan sample-portfolio-data.json
-
-# 4. Activate Site
-Experience Builder → Publish → Done!
-Prerequisites: Salesforce org with Experience Cloud license + VS Code Salesforce Extension Pack
-
-Architected by Venkatesh M
-Salesforce Developer/Architect | Capgemini India | LinkedIn
+sf data tree import --plan ./data/sample.json
+# Site live! 🎉
