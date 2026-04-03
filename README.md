@@ -167,23 +167,6 @@ metadata-driven-lwc-portfolio/
 </ol>
 
 
-<h2>🚀 Deployment Steps</h2>
-
-<ol>
-  <li>Clone the repository</li>
-  <li>Authenticate to your Salesforce org</li>
-  <li>Deploy the source using Salesforce CLI</li>
-  <li>Create required Custom Metadata Types</li>
-  <li>Create own metadata records</li>
-  <li>Activate and configure the Experience Site</li>
-</ol>
-
-<pre><code>git clone https://github.com/Venkat152/Metadata-driven-LWC-Portfolio.git
-cd Metadata-driven-LWC-Portfolio;
-sf org login web --alias portfolio
-sf project deploy start
-</code></pre>
-
 <h2>👨‍💻 Author</h2>
 
 <p>
