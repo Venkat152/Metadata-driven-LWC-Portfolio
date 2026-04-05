@@ -26,12 +26,16 @@ This project showcases a production-grade, maintainable architecture where all c
 
 > **Youtube**: I will Update soon ......
 
-## 🛠️ Tech Stack
+### 💻 Tech Stack & Core Competencies
 
-- **Frontend**: Lightning Web Components (LWC), LWR
-- **Backend**: Apex, Custom Metadata Types
-- **Platform**: Salesforce Experience Cloud (Experience Site)
-- **Other**: Triggers, Configuration, Sharing Rules 
+| Domain | Technologies & Frameworks |
+| :--- | :--- |
+| **Frontend / UX** | ![LWC](https://img.shields.io/badge/LWC-0176D3?style=for-the-badge&logo=lightning&logoColor=white) ![LWR](https://img.shields.io/badge/LWR_Runtime-00A1E0?style=for-the-badge&logo=salesforce&logoColor=white) ![UX Design](https://img.shields.io/badge/User_Experience-2D3748?style=for-the-badge&logo=figma&logoColor=white) |
+| **Backend / Logic** | ![Apex](https://img.shields.io/badge/Apex-663399?style=for-the-badge&logo=salesforce&logoColor=white) ![Triggers](https://img.shields.io/badge/Triggers-1798C1?style=for-the-badge&logo=salesforce&logoColor=white) ![Logic](https://img.shields.io/badge/Business_Logic-4A5568?style=for-the-badge&logo=docsdotrs&logoColor=white) |
+| **Platform** | ![Experience Cloud](https://img.shields.io/badge/Experience_Cloud-0176D3?style=for-the-badge&logo=salesforce&logoColor=white) ![Experience Site](https://img.shields.io/badge/Digital_Experiences-00A1E0?style=for-the-badge&logo=salesforce&logoColor=white) |
+| **Security & Config** | ![Metadata Types](https://img.shields.io/badge/Custom_Metadata-525DF9?style=for-the-badge&logo=salesforce&logoColor=white) ![Sharing Rules](https://img.shields.io/badge/Sharing_Model-2D3748?style=for-the-badge&logo=auth0&logoColor=white) ![Config](https://img.shields.io/badge/Configuration-217346?style=for-the-badge&logo=checkmarx&logoColor=white) |
+
+---
 
 ## 📋 Project Highlights
 
