@@ -14,6 +14,10 @@ This project showcases a production-grade, **zero-hardcode** portfolio architect
 
 ---
 
+## 📸 Modal Diagram
+
+<img src="screenshots/Modal.png" alt="Modal">
+
 ## 🧠 Sentinel AI Governance
 The portfolio includes an autonomous **Agentforce Assistant** that serves as a bridge between the Experience Site and the backend data layer.
 
