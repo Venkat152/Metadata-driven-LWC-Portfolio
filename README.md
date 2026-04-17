@@ -1,23 +1,39 @@
-# Metadata-Driven LWC Portfolio on Experience Cloud (LWR)
+# 🚀 AI-Powered & Metadata-Driven LWC Portfolio
+### Salesforce Experience Cloud (LWR) + Agentforce + Cross-Org Integration
 
-A modern, **zero-hardcode**, fully dynamic portfolio website built on **Salesforce Experience Cloud (LWR)** using Lightning Web Components.
+![Metadata-Driven LWC Portfolio](https://capsule-render.vercel.app/api?type=rect&color=0:111827,35:1e3a8a,70:0A66C2,100:38BDF8&height=250&section=header&text=AI-Powered%20LWC%20Portfolio&fontSize=35&fontColor=ffffff&fontAlignY=36&desc=Agentforce%20%7C%20Cross-Org%20REST%20%7C%20Experience%20Cloud%20(LWR)&descSize=18&descAlignY=60&animation=twinkling)
 
-![Metadata-Driven LWC Portfolio](https://capsule-render.vercel.app/api?type=rect&color=0:111827,35:1e3a8a,70:0A66C2,100:38BDF8&height=250&section=header&text=Metadata-Driven%20LWC%20Portfolio&fontSize=35&fontColor=ffffff&fontAlignY=36&desc=Custom%20Metadata%20%7C%20Service%20Layer%20%7C%20Experience%20Cloud%20(LWR)&descSize=18&descAlignY=60&animation=twinkling)
+This project showcases a production-grade, **zero-hardcode** portfolio architecture. Beyond dynamic rendering via Custom Metadata, it features an **integrated Agentforce Service Agent** that acts as a conversational administrative console to manage professional data in real-time.
 
+---
+## 🏗️ Architectural Challenge & Innovation
 
-This project showcases a production-grade, maintainable architecture where all content (projects, skills, certifications, etc.) can be updated **without any code deployment** — purely through **Custom Metadata Types**.
+| **The Problem** | **The Solution** |
+| :--- | :--- |
+| My primary Portfolio Org (hosting the Experience Site) was not **Agentforce-enabled**, creating a technical roadblock for deploying a native Service Agent for real-time site management. | I engineered a **Cross-Org AI Orchestration** layer. I deployed the Service Agent in a modern, Agentforce-enabled "Management Org" and bridged the gap using a secure **Named Credentials + OAuth 2.0** framework to control the Portfolio Org via REST APIs. |
 
+---
+
+## 🧠 Sentinel AI Governance
+The portfolio includes an autonomous **Agentforce Assistant** that serves as a bridge between the Experience Site and the backend data layer.
+
+* **Conversational Management**: Fetch current skill proficiencies or trigger remote updates via natural language.
+* **Dispatcher Pattern Apex**: A sophisticated single-class routing architecture (`PortfolioAgentActions`) that bypasses platform limits to handle multiple AI intents (Fetch/Update).
+* **Secure Cross-Org Bridge**: Leverages **Named Credentials (OAuth 2.0)** to securely modify data in a remote Salesforce environment via REST APIs.
+* **Embedded Messaging**: Seamlessly integrated into the LWR site footer for instant administrative control.
+
+---
 
 ## ✨ Key Features
 
-- **Zero-Hardcode Architecture** – All portfolio content is driven by Custom Metadata Records
-- **Dynamic LWC Components** – Fully reactive, reusable, and performant Lightning Web Components
-- **Advanced Filtering** – Multi-dimensional filtering (Tech Stack, Difficulty, Date, etc.)
-- **Secure Guest User Experience** – Optimized Apex backend with proper sharing & security model
-- **Fully Responsive Design** – Optimized for desktop, tablet, and mobile
-- **LWR (Lightning Web Runtime)** – Built on modern Experience Cloud architecture
-- **Enterprise-Grade Code Quality** – Clean service layer, proper separation of concerns, and maintainability focus
+- **Zero-Hardcode Architecture** – 100% of content is driven by Custom Metadata Records.
+- **Agentforce Service Agent** – Headless administrative layer for conversational data updates.
+- **LWR (Lightning Web Runtime)** – Built on Salesforce’s fastest, modern site architecture.
+- **Advanced Filtering** – Multi-dimensional LWC filtering logic for projects and technical stacks.
+- **Secure Guest User Model** – Optimized Apex backend with hardened security for public exposure.
+- **Enterprise-Grade Quality** – Strict separation of concerns using a Service Layer Pattern.
 
+---
 ## 🚀 Live Demo
 
 > **Live Portfolio**: https://ddm00000fpkymuan-dev-ed.develop.my.site.com/venkateshPortfolio/s
@@ -30,26 +46,13 @@ This project showcases a production-grade, maintainable architecture where all c
 
 | Domain | Technologies & Frameworks |
 | :--- | :--- |
+| **AI & Automation** | ![Agentforce](https://img.shields.io/badge/Agentforce-663399?style=for-the-badge&logo=salesforce&logoColor=white) ![Reasoning](https://img.shields.io/badge/Atlas_Reasoning-00A1E0?style=for-the-badge&logo=ai&logoColor=white) |
 | **Frontend / UX** | ![LWC](https://img.shields.io/badge/LWC-0176D3?style=for-the-badge&logo=lightning&logoColor=white) ![LWR](https://img.shields.io/badge/LWR_Runtime-00A1E0?style=for-the-badge&logo=salesforce&logoColor=white) ![UX Design](https://img.shields.io/badge/User_Experience-2D3748?style=for-the-badge&logo=figma&logoColor=white) |
 | **Backend / Logic** | ![Apex](https://img.shields.io/badge/Apex-663399?style=for-the-badge&logo=salesforce&logoColor=white) ![Triggers](https://img.shields.io/badge/Triggers-1798C1?style=for-the-badge&logo=salesforce&logoColor=white) ![Logic](https://img.shields.io/badge/Business_Logic-4A5568?style=for-the-badge&logo=docsdotrs&logoColor=white) |
 | **Platform** | ![Experience Cloud](https://img.shields.io/badge/Experience_Cloud-0176D3?style=for-the-badge&logo=salesforce&logoColor=white) ![Experience Site](https://img.shields.io/badge/Digital_Experiences-00A1E0?style=for-the-badge&logo=salesforce&logoColor=white) |
 | **Security & Config** | ![Metadata Types](https://img.shields.io/badge/Custom_Metadata-525DF9?style=for-the-badge&logo=salesforce&logoColor=white) ![Sharing Rules](https://img.shields.io/badge/Sharing_Model-2D3748?style=for-the-badge&logo=auth0&logoColor=white) ![Config](https://img.shields.io/badge/Configuration-217346?style=for-the-badge&logo=checkmarx&logoColor=white) |
 
 ---
-
-## 📋 Project Highlights
-
-### Scalable Architecture
-Engineered a dynamic portfolio on Salesforce Experience Cloud (LWR) using a **"Zero-Hardcode"** design pattern, allowing content updates via Custom Metadata without any code deployments.
-
-### High-Performance Backend
-Developed a robust Apex service layer to fetch and render complex data models, optimized for **guest user security** and real-time performance.
-
-### Advanced UI/UX
-Built reactive LWC components featuring multi-dimensional filtering, seamless GitHub API integration, and fully responsive layouts.
-
-### Enterprise Delivery
-Demonstrated strong expertise in LWR site architecture, secure data modeling, and production-ready development standards.
 
 ## 📁 Project Structure
 
@@ -84,7 +87,16 @@ metadata-driven-lwc-portfolio/
 └── README.md
 
 ```
-## 📸 Screenshots
+## 📸 Screenshots (Service Agent Created Org)
+
+1. Fetch All Skills
+<img src="screenshots/neworg1.png" alt="Home UI">
+
+2. Update Skill with proficiency + Visibility in UI
+<img src="screenshots/neworg2.png" alt="Home UI">
+
+
+## 📸 Screenshots (Portfolio Deployed Org)
 
 1. Home / Portfolio Landing Page
 <img src="screenshots/home.png" alt="Home Page">
@@ -118,63 +130,51 @@ metadata-driven-lwc-portfolio/
 <img src="screenshots/mobile2.png" alt="Mobile view">
 
 
-<h2>🏗️ Architecture Highlights</h2>
+---
+
+## 🏗️ Architecture Highlights
 
 <table>
   <tr>
     <td valign="top" width="50%">
-      <h3>⚙️ Custom Metadata Driven</h3>
+      <h3>🤖 AI Dispatcher Pattern</h3>
       <ul>
-        <li>Zero-hardcoded values in LWC components</li>
-        <li>No-deployment content updates</li>
-        <li>Business-managed via Admin UI</li>
+        <li>Single Invocable entry-point for multi-intent AI actions</li>
+        <li>Dynamic routing logic for Fetch vs. Update operations</li>
+        <li>Automated Slot Filling for data integrity</li>
       </ul>
     </td>
     <td valign="top" width="50%">
-      <h3>🧱 Service Layer Pattern</h3>
+      <h3>🧱 Cross-Org Integration</h3>
       <ul>
-        <li>Clean separation between UI and business logic</li>
-        <li>Fully testable Apex controllers</li>
-        <li>Enterprise-grade maintainability</li>
+        <li>Secure communication via Named Credentials</li>
+        <li>Remote JSON payload processing</li>
+        <li>Decoupled Site Management vs. Data Source</li>
       </ul>
     </td>
   </tr>
   <tr>
     <td valign="top" width="50%">
-      <h3>⚡ Optimized Apex</h3>
+      <h3>⚙️ Metadata-Driven UI</h3>
       <ul>
-        <li>Governor-limit safe design</li>
-        <li>Optimized SOQL and DML patterns</li>
+        <li>Zero hardcoded strings in LWC components</li>
+        <li>No-deployment content updates</li>
+        <li>Scalable data model for rapid expansion</li>
       </ul>
     </td>
     <td valign="top" width="50%">
-      <h3>🔒 Guest User Optimized</h3>
+      <h3>🔒 Enterprise Security</h3>
       <ul>
-        <li>Secure data exposure for public Experience Sites</li>
-        <li>LWR-ready architecture</li>
-        <li>Performance-focused guest access design</li>
+        <li>Hardened Guest User Access for LWR</li>
+        <li>Clean Service Layer for logic encapsulation</li>
+        <li>Optimized SOQL and Governor Limit management</li>
       </ul>
     </td>
   </tr>
 </table>
 
-<h2>🎯 Architect Skills Demonstrated</h2>
+---
 
-<table>
-  <tr>
-    <td valign="top" width="50%">
-      <ul>
-        <li><strong>Metadata-Driven Development</strong><br>Production-grade dynamic content systems</li>
-        <li><strong>LWR + Experience Cloud</strong><br>End-to-end site architecture expertise</li>
-      </ul>
-    </td>
-    <td valign="top" width="50%">
-      <ul>
-        <li><strong>Enterprise Solution Design</strong><br>Security, scalability, and maintainability focus</li>
-        <li><strong>Salesforce Best Practices</strong><br>Service layers, and guest security</li>
-      </ul>
-    </td>
-  </tr>
 </table>
 
 <h2>🔮 Planned Enhancements</h2>
